@@ -10,19 +10,24 @@ import { dictionaries } from "@/lib/dictionaries";
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { language } = useLanguage();
   const t = dictionaries[language].contact;
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const contactInfo = [
     {
       icon: Mail,
-      label: dictionaries[language].contact.form.email,
+      label: t.form.email,
       value: "contact@phichaya.com",
       href: "mailto:contact@phichaya.com",
     },
     {
       icon: Phone,
-      label: dictionaries[language].contact.form.phone,
+      label: t.form.phone,
       value: "082-646-5526",
       href: "tel:0826465526",
     },
@@ -50,13 +55,15 @@ export function ContactSection() {
     }, 1500);
   };
 
+  if (!mounted) return null;
+
   return (
-    <section id="contact" className="section-gray py-28 relative overflow-hidden">
+    <section id="contact" className="section-gray py-28 relative overflow-hidden pointer-events-none">
       {/* Decorative blobs - Explicitly pointer-events-none */}
       <div className="absolute top-0 left-0 w-80 h-80 gradient-blob gradient-blob-blue animate-pulse-soft pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 gradient-blob gradient-blob-purple animate-pulse-soft pointer-events-none" style={{ animationDelay: "2s" }} />
 
-      <div className="mx-auto max-w-7xl px-6 relative z-10">
+      <div className="mx-auto max-w-7xl px-6 relative z-10 pointer-events-auto">
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-primary">
             {t.label}
