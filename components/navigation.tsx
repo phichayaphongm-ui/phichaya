@@ -8,6 +8,7 @@ import { dictionaries } from "@/lib/dictionaries";
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { language, toggleLanguage } = useLanguage();
   const t = dictionaries[language].nav;
 
@@ -20,12 +21,15 @@ export function Navigation() {
   ];
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <header

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CheckCircle2, Trophy, Users, History } from "lucide-react";
+import React from "react";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -9,6 +10,14 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+
     return (
         <div className="bg-white">
             {/* Hero Section */}

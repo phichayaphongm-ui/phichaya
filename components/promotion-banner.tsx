@@ -5,8 +5,15 @@ import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
 
 export function PromotionBanner() {
+    const [mounted, setMounted] = React.useState(false);
     const { language } = useLanguage();
     const t = dictionaries[language].promotion;
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <section className="relative overflow-hidden py-24">
