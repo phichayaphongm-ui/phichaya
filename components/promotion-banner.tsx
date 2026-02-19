@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Download, Sparkles, FileText, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
