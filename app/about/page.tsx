@@ -36,7 +36,7 @@ export default function AboutPage() {
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl skew-y-1 transform transition-all hover:skew-y-0 duration-500 card-gradient-border">
                                 <Image
                                     src="/about-poster.png"
-                                    alt="Phichaya HR Solutions"
+                                    alt="Phichaya HR Solutions Poster Image New"
                                     width={1000}
                                     height={1200}
                                     className="w-full h-auto object-cover"
