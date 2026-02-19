@@ -16,11 +16,58 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Phichaya HR Solutions | HR Digital Transformation Expert",
+  metadataBase: new URL("https://phichaya.com"),
+  title: {
+    default: "Phichaya HR Solutions | HR Digital Transformation Expert",
+    template: "%s | Phichaya HR Solutions"
+  },
   description:
-    "ผู้เชี่ยวชาญด้าน HR Digital Transformation มากกว่า 15 ปี โซลูชั่น HR ครบวงจร สำหรับองค์กรและ SME",
-  keywords:
-    "HR Solutions, Digital Transformation, HR Consulting, Thailand, Recruitment, Organization Development",
+    "Phichaya HR Solutions: Experts in HR Digital Transformation for over 15 years. Providing comprehensive HR solutions for organizations and SMEs in Thailand.",
+  keywords: [
+    "HR Solutions",
+    "Digital Transformation",
+    "HR Consulting",
+    "Thailand HR",
+    "Recruitment Services",
+    "Organization Development",
+    "ที่ปรึกษา HR",
+    "วางระบบ HR",
+    "Digital HR",
+    "SME HR Solutions"
+  ],
+  authors: [{ name: "Phichaya HR Solutions" }],
+  creator: "Phichaya HR Solutions",
+  publisher: "Phichaya HR Solutions",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "th_TH",
+    url: "https://phichaya.com",
+    siteName: "Phichaya HR Solutions",
+    title: "Phichaya HR Solutions | HR Digital Transformation Expert",
+    description: "Experts in HR Digital Transformation for over 15 years. Strategic HR Solutions for Sustainable Growth.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Phichaya HR Solutions Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Phichaya HR Solutions | HR Digital Transformation Expert",
+    description: "Experts in HR Digital Transformation for over 15 years. Strategic HR Solutions for Sustainable Growth.",
+    images: ["/logo.png"],
+  },
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -47,10 +94,16 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://phichaya.com/#organization",
               "name": "Phichaya HR Solutions",
+              "alternateName": "พิจารยา เอชอาร์ โซลูชั่น",
               "url": "https://phichaya.com",
-              "logo": "https://phichaya.com/logo.png",
-              "description": "Strategic HR Solutions & Digital Transformation for Sustainable Growth",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phichaya.com/logo.png"
+              },
+              "image": "https://phichaya.com/logo.png",
+              "description": "Strategic HR Solutions & Digital Transformation Expert for Organizations and SMEs in Thailand.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Bangkok",
@@ -58,12 +111,22 @@ export default function RootLayout({
               },
               "contactPoint": {
                 "@type": "ContactPoint",
+                "telephone": "+66-2-XXX-XXXX",
                 "contactType": "customer service",
                 "areaServed": "TH",
                 "availableLanguage": ["Thai", "English"]
               },
               "sameAs": [
-                "https://www.facebook.com/phichaya.hr"
+                "https://www.facebook.com/phichaya.hr",
+                "https://www.linkedin.com/company/phichaya-hr"
+              ],
+              "knowsAbout": [
+                "Human Resources",
+                "Digital Transformation",
+                "Recruitment",
+                "Organization Development",
+                "Payroll Management",
+                "Training and Development"
               ]
             }),
           }}

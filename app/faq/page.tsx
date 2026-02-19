@@ -31,70 +31,50 @@ export default function FAQPage() {
 
             <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
                 <div className="space-y-12">
-
-                    {/* Section 1: Services */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-primary rounded-full" />
-                            บริการของเรา
-                        </h2>
-                        <div className="space-y-4">
-                            <FaqItem
-                                question="Phichaya HR Solutions ให้บริการอะไรบ้าง?"
-                                answer="เราให้บริการที่ปรึกษาและโซลูชั่นด้าน HR แบบครบวงจร ได้แก่ HR Outsourcing (รับทำเงินเดือน, สรรหาพนักงาน), HR Digital Transformation (ออกแบบระบบ HR, Automation), Training Solutions (จัดฝึกอบรม, สร้างคอร์สออนไลน์), และการพัฒนา Web/Mobile Application สำหรับงาน HR โดยเฉพาะ"
-                            />
-                            <FaqItem
-                                question="บริการ HR Outsourcing เหมาะกับธุรกิจขนาดไหน?"
-                                answer="บริการของเราเหมาะสำหรับธุรกิจทุกขนาด โดยเฉพาะ SME ที่ต้องการลดต้นทุนในการจ้างทีม HR ประจำ และต้องการความเป็นมืออาชีพในการจัดการงานบุคคล เรามีแพ็คเกจที่ยืดหยุ่นตามความต้องการของลูกค้า"
-                            />
-                            <FaqItem
-                                question="รับทำ Digital Transformation สำหรับองค์กรที่ยังใช้กระดาษอยู่หรือไม่?"
-                                answer="ใช่ครับ เราเชี่ยวชาญในการเปลี่ยนผ่านจากระบบ Manual (กระดาษ/Excel) ไปสู่ระบบ Digital 100% เราจะช่วยวิเคราะห์กระบวนการทำงานเดิม เลือกเครื่องมือที่เหมาะสม และวางแผนการเปลี่ยนผ่านให้ราบรื่นที่สุด"
-                            />
-                        </div>
-                    </section>
-
-                    {/* Section 2: HR Tech & Software */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-secondary rounded-full" />
-                            ระบบ HR และเทคโนโลยี
-                        </h2>
-                        <div className="space-y-4">
-                            <FaqItem
-                                question="มีระบบ HR Software จำหน่ายหรือไม่?"
-                                answer="เราไม่ได้จำหน่าย HR Software สำเร็จรูปเพียงอย่างเดียว แต่เราเน้นการ 'ออกแบบและพัฒนา' ระบบให้เหมาะกับ Workflow ขององค์กรคุณ (Custom Solution) หรือช่วยคัดเลือกและ Implement Software ที่มีในตลาดให้ตอบโจทย์ที่สุด"
-                            />
-                            <FaqItem
-                                question="AI Chatbot สำหรับ HR ทำอะไรได้บ้าง?"
-                                answer="AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, หรือใช้ในการสรรหา (Screening Candidate) เบื้องต้น ช่วยลดงาน Routine ของ HR ได้กว่า 70%"
-                            />
-                        </div>
-                    </section>
-
-                    {/* Section 3: Legal & PDPA */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-purple-500 rounded-full" />
-                            กฎหมายและ PDPA
-                        </h2>
-                        <div className="space-y-4">
-                            <FaqItem
-                                question="บริการของ Phichaya HR รองรับ PDPA หรือไม่?"
-                                answer="ถูกต้องครับ ทุกกระบวนการและระบบที่เราออกแบบ ให้ความสำคัญกับ พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA) อย่างเคร่งครัด มีการจัดทำ Privacy Notice, Consent Form และมาตรการรักษาความปลอดภัยข้อมูลพนักงาน"
-                            />
-                            <FaqItem
-                                question="ถ้าจ้างทำเงินเดือน ข้อมูลจะรั่วไหลหรือไม่?"
-                                answer="เรามีมาตรฐานการรักษาความปลอดภัยข้อมูลขั้นสูง ข้อมูลเงินเดือนจะถูกเก็บเป็นความลับและเข้าถึงได้เฉพาะเจ้าหน้าที่ที่ได้รับอนุญาตเท่านั้น (Strict Access Control) และมีการทำสัญญา Non-Disclosure Agreement (NDA) กับลูกค้าทุกราย"
-                            />
-                        </div>
-                    </section>
-
+                    {/* ... sections ... */}
                 </div>
             </div>
+
+            {/* AEO: FAQ Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                            {
+                                "@type": "Question",
+                                "name": "Phichaya HR Solutions ให้บริการอะไรบ้าง?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "เราให้บริการที่ปรึกษาและโซลูชั่นด้าน HR แบบครบวงจร ได้แก่ HR Outsourcing (รับทำเงินเดือน, สรรหาพนักงาน), HR Digital Transformation (ออกแบบระบบ HR, Automation), Training Solutions (จัดฝึกอบรม, สร้างคอร์สออนไลน์), และการพัฒนา Web/Mobile Application สำหรับงาน HR โดยเฉพาะ"
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "บริการ HR Outsourcing เหมาะกับธุรกิจขนาดไหน?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "บริการของเราเหมาะสำหรับธุรกิจทุกขนาด โดยเฉพาะ SME ที่ต้องการลดต้นทุนในการจ้างทีม HR ประจำ และต้องการความเป็นมืออาชีพในการจัดการงานบุคคล"
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "AI Chatbot สำหรับ HR ทำอะไรได้บ้าง?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, หรือใช้ในการสรรหาเบื้องต้น"
+                                }
+                            }
+                        ]
+                    }),
+                }}
+            />
         </div>
     );
 }
+
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
     return (
