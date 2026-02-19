@@ -43,9 +43,11 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  alternates: {
-    canonical: "/",
-  },
+  /* 
+     alternates: {
+       canonical: "/",
+     }, 
+  */
   openGraph: {
     type: "website",
     locale: "th_TH",
@@ -93,8 +95,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://phichaya.com/#organization",
+              "@type": "LocalBusiness",
+              "@id": "https://phichaya.com/#local-business",
               "name": "Phichaya HR Solutions",
               "alternateName": "พิจารยา เอชอาร์ โซลูชั่น",
               "url": "https://phichaya.com",
@@ -106,16 +108,33 @@ export default function RootLayout({
               "description": "Strategic HR Solutions & Digital Transformation Expert for Organizations and SMEs in Thailand.",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Bangkok",
                 "addressLocality": "Bangkok",
+                "addressRegion": "Bangkok",
+                "postalCode": "10XXX",
                 "addressCountry": "TH"
               },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+66-2-XXX-XXXX",
-                "contactType": "customer service",
-                "areaServed": "TH",
-                "availableLanguage": ["Thai", "English"]
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 13.7563,
+                "longitude": 100.5018
               },
+              "telephone": "+66-2-XXX-XXXX",
+              "priceRange": "$$$",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                }
+              ],
               "sameAs": [
                 "https://www.facebook.com/phichaya.hr",
                 "https://www.linkedin.com/company/phichaya-hr"
@@ -131,6 +150,7 @@ export default function RootLayout({
             }),
           }}
         />
+
       </body>
     </html>
   );
