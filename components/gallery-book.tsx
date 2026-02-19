@@ -137,7 +137,7 @@ const Cover = forwardRef<HTMLDivElement, any>((props, ref) => {
         <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard">
             <div className="h-full w-full relative overflow-hidden">
                 <img
-                    src="/images/gallery/ปกหน้า.png"
+                    src="/images/gallery/cover-front.png"
                     alt="Cover"
                     className="w-full h-full object-cover shadow-2xl"
                 />
@@ -153,7 +153,7 @@ const EndCover = forwardRef<HTMLDivElement, any>((props, ref) => {
         <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard">
             <div className="h-full w-full relative overflow-hidden">
                 <img
-                    src="/images/gallery/ปกหลัง.png"
+                    src="/images/gallery/cover-back.png"
                     alt="End Cover"
                     className="w-full h-full object-cover shadow-2xl"
                 />
@@ -168,10 +168,15 @@ export function GalleryBook() {
     const bookRef = useRef<any>(null);
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [isMuted, setIsMuted] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const [windowSize, setWindowSize] = useState({
         width: typeof window !== 'undefined' ? window.innerWidth : 1200,
         height: typeof window !== 'undefined' ? window.innerHeight : 800
     });
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         // Handle window resize
@@ -368,6 +373,13 @@ export function GalleryBook() {
 
     const bookWidth = isMobile ? Math.min(windowSize.width - 40, 400) : 400;
     const bookHeight = isMobile ? Math.min(windowSize.height - 200, 600) : 550;
+
+    if (!mounted) return (
+        <div className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p className="text-gray-400 text-sm font-mono uppercase tracking-[0.2em]">Initialing Gallery...</p>
+        </div>
+    );
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10 relative">
