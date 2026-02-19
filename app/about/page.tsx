@@ -33,11 +33,15 @@ export default function AboutPage() {
                         <div className="relative">
                             <div className="absolute -top-4 -left-4 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
                             <div className="absolute -bottom-8 -right-4 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl skew-y-1 transform transition-all hover:skew-y-0 duration-500">
-                                {/* Placeholder for About Image, using a gradient placeholder for now */}
-                                <div className="aspect-[4/5] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-400">
-                                    <span className="text-lg">About Us Image</span>
-                                </div>
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl skew-y-1 transform transition-all hover:skew-y-0 duration-500 card-gradient-border">
+                                <Image
+                                    src="/about-poster.png"
+                                    alt="Phichaya HR Solutions Poster"
+                                    width={800}
+                                    height={1000}
+                                    className="w-full h-auto object-cover"
+                                    priority
+                                />
                             </div>
                         </div>
 
