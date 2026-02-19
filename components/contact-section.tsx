@@ -105,7 +105,7 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 relative z-20">
             <div className="rounded-2xl card-gradient-border bg-white p-8">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
@@ -233,7 +233,8 @@ export function ContactSection() {
           {/* Bot Logo / Assistant Image */}
           <div className="lg:col-span-3 flex justify-center items-center lg:pt-12">
             <div className="relative group">
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
               <Image
                 src="/botlogo.png"
                 alt="Assistant Bot"
