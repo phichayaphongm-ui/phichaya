@@ -45,14 +45,41 @@ export function ContactSection() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
+
+    // Create a FormData object from the form
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // We'll use the id of inputs as keys
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      service: formData.get("service") || "Not Specified",
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.error || "Failed to send message"}`);
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1500);
+    }
   };
 
   if (!mounted) return null;
@@ -143,12 +170,12 @@ export function ContactSection() {
                       >
                         {t.form.name}
                       </label>
-                      <input
-                        id="name"
-                        type="text"
-                        required
-                        placeholder={t.form.namePlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      name="name"
+                      id="name"
+                      type="text"
+                      required
+                      placeholder={t.form.namePlaceholder}
+                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -158,11 +185,11 @@ export function ContactSection() {
                       >
                         {t.form.company}
                       </label>
-                      <input
-                        id="company"
-                        type="text"
-                        placeholder={t.form.companyPlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      name="company"
+                      id="company"
+                      type="text"
+                      placeholder={t.form.companyPlaceholder}
+                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -175,12 +202,12 @@ export function ContactSection() {
                       >
                         {t.form.email}
                       </label>
-                      <input
-                        id="email"
-                        type="email"
-                        required
-                        placeholder="email@company.com"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      name="email"
+                      id="email"
+                      type="email"
+                      required
+                      placeholder="email@company.com"
+                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -190,11 +217,11 @@ export function ContactSection() {
                       >
                         {t.form.phone}
                       </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        placeholder="08X-XXX-XXXX"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      name="phone"
+                      id="phone"
+                      type="tel"
+                      placeholder="08X-XXX-XXXX"
+                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -206,13 +233,13 @@ export function ContactSection() {
                     >
                       {t.form.message}
                     </label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      required
-                      placeholder={t.form.messagePlaceholder}
-                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
-                    />
+                    name="message"
+                    id="message"
+                    rows={4}
+                    required
+                    placeholder={t.form.messagePlaceholder}
+                    className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      />
                   </div>
 
                   <button
