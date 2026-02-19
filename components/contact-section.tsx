@@ -170,12 +170,13 @@ export function ContactSection() {
                       >
                         {t.form.name}
                       </label>
-                      name="name"
-                      id="name"
-                      type="text"
-                      required
-                      placeholder={t.form.namePlaceholder}
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      <input
+                        name="name"
+                        id="name"
+                        type="text"
+                        required
+                        placeholder={t.form.namePlaceholder}
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -185,11 +186,12 @@ export function ContactSection() {
                       >
                         {t.form.company}
                       </label>
-                      name="company"
-                      id="company"
-                      type="text"
-                      placeholder={t.form.companyPlaceholder}
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      <input
+                        name="company"
+                        id="company"
+                        type="text"
+                        placeholder={t.form.companyPlaceholder}
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -202,12 +204,13 @@ export function ContactSection() {
                       >
                         {t.form.email}
                       </label>
-                      name="email"
-                      id="email"
-                      type="email"
-                      required
-                      placeholder="email@company.com"
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      <input
+                        name="email"
+                        id="email"
+                        type="email"
+                        required
+                        placeholder="email@company.com"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -217,11 +220,12 @@ export function ContactSection() {
                       >
                         {t.form.phone}
                       </label>
-                      name="phone"
-                      id="phone"
-                      type="tel"
-                      placeholder="08X-XXX-XXXX"
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      <input
+                        name="phone"
+                        id="phone"
+                        type="tel"
+                        placeholder="08X-XXX-XXXX"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -233,13 +237,14 @@ export function ContactSection() {
                     >
                       {t.form.message}
                     </label>
-                    name="message"
-                    id="message"
-                    rows={4}
-                    required
-                    placeholder={t.form.messagePlaceholder}
-                    className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
-                      />
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows={4}
+                      required
+                      placeholder={t.form.messagePlaceholder}
+                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                    />
                   </div>
 
                   <button
