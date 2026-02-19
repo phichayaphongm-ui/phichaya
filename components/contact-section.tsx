@@ -52,9 +52,9 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="section-gray py-28 relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute top-0 left-0 w-80 h-80 gradient-blob gradient-blob-blue animate-pulse-soft" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 gradient-blob gradient-blob-purple animate-pulse-soft" style={{ animationDelay: "2s" }} />
+      {/* Decorative blobs - Explicitly pointer-events-none */}
+      <div className="absolute top-0 left-0 w-80 h-80 gradient-blob gradient-blob-blue animate-pulse-soft pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 gradient-blob gradient-blob-purple animate-pulse-soft pointer-events-none" style={{ animationDelay: "2s" }} />
 
       <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="text-center">
@@ -71,7 +71,7 @@ export function ContactSection() {
 
         <div className="mt-16 grid gap-12 lg:grid-cols-12 items-start">
           {/* Contact Info */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 relative z-20">
             <h3 className="text-lg font-semibold text-gray-900">
               {t.channels}
             </h3>
@@ -104,9 +104,9 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-5 relative z-20">
-            <div className="rounded-2xl card-gradient-border bg-white p-8">
+          {/* Contact Form - CRITICAL FIX: Higher z-index and explicit clickability */}
+          <div className="lg:col-span-5 relative z-50">
+            <div className="rounded-2xl card-gradient-border bg-white p-8 relative">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/25">
@@ -127,7 +127,7 @@ export function ContactSection() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-5 relative z-10">
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label
@@ -141,7 +141,7 @@ export function ContactSection() {
                         type="text"
                         required
                         placeholder={t.form.namePlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -155,7 +155,7 @@ export function ContactSection() {
                         id="company"
                         type="text"
                         placeholder={t.form.companyPlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export function ContactSection() {
                         type="email"
                         required
                         placeholder="email@company.com"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                     <div>
@@ -187,7 +187,7 @@ export function ContactSection() {
                         id="phone"
                         type="tel"
                         placeholder="08X-XXX-XXXX"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                       />
                     </div>
                   </div>
@@ -204,7 +204,7 @@ export function ContactSection() {
                       rows={4}
                       required
                       placeholder={t.form.messagePlaceholder}
-                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
                     />
                   </div>
 
