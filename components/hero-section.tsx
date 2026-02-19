@@ -7,14 +7,18 @@ import { dictionaries } from "@/lib/dictionaries";
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const { language } = useLanguage();
   const t = dictionaries[language].hero;
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <section
