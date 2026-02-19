@@ -4,22 +4,22 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
-    try {
-        const { name, email, service, message } = await req.json();
+  try {
+    const { name, email, service, message } = await req.json();
 
-        if (!name || !email || !service || !message) {
-            return NextResponse.json(
-                { error: "Missing required fields" },
-                { status: 400 }
-            );
-        }
+    if (!name || !email || !service || !message) {
+      return NextResponse.json(
+        { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
 
-        const { data, error } = await resend.emails.send({
-            from: "Phichaya HR Solutions <onboarding@resend.dev>",
-            to: ["contact@phichaya.com"],
-            subject: `New Contact Inquiry from ${name}`,
-            replyTo: email,
-            html: `
+    const { data, error } = await resend.emails.send({
+      from: "Phichaya HR Solutions <onboarding@resend.dev>",
+      to: ["contact@phichaya.com"],
+      subject: `New Contact Inquiry from ${name}`,
+      replyTo: email,
+      html: `
         <div style="font-family: sans-serif; line-height: 1.5; color: #333; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
           <h2 style="color: #1e3a5f; border-bottom: 2px solid #1e3a5f; padding-bottom: 10px;">New Website Inquiry</h2>
           
@@ -50,16 +50,16 @@ export async function POST(req: Request) {
           </p>
         </div>
       `,
-        });
+    });
 
-        if (error) {
-            console.error("Resend Error:", error);
-            return NextResponse.json({ error }, { status: 500 });
-        }
-
-        return NextResponse.json({ success: true, data });
-    } catch (error) {
-        console.error("Internal Error:", error);
-        return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    if (error) {
+      console.error("Resend API full error object:", JSON.stringify(error, null, 2));
+      return NextResponse.json({ error: error.message || "Email sending failed" }, { status: 500 });
     }
+
+    return NextResponse.json({ success: true, data });
+  } catch (error) {
+    console.error("Internal Error:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
 }

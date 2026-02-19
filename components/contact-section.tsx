@@ -86,12 +86,12 @@ export function ContactSection() {
   if (!mounted) return null;
 
   return (
-    <section id="contact" className="section-gray py-28 relative overflow-hidden pointer-events-none">
+    <section id="contact" className="section-gray py-28 relative overflow-hidden">
       {/* Decorative blobs - Explicitly pointer-events-none */}
       <div className="absolute top-0 left-0 w-80 h-80 gradient-blob gradient-blob-blue animate-pulse-soft pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-96 h-96 gradient-blob gradient-blob-purple animate-pulse-soft pointer-events-none" style={{ animationDelay: "2s" }} />
 
-      <div className="mx-auto max-w-7xl px-6 relative z-10 pointer-events-auto">
+      <div className="mx-auto max-w-7xl px-6 relative z-10">
         <div className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-primary">
             {t.label}
@@ -121,7 +121,7 @@ export function ContactSection() {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-2xl card-gradient-border bg-white p-4 transition-all hover:-translate-y-0.5"
+                  className="group flex items-center gap-4 rounded-2xl card-gradient-border bg-white p-4 transition-all hover:translate-x-1"
                 >
                   <div className="icon-glow flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary transition-all group-hover:from-primary group-hover:to-secondary group-hover:text-white group-hover:shadow-lg group-hover:shadow-primary/20">
                     <info.icon className="h-5 w-5" />
@@ -139,9 +139,9 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Contact Form - CRITICAL FIX: Higher z-index and explicit clickability */}
-          <div className="lg:col-span-5 relative z-50">
-            <div className="rounded-2xl card-gradient-border bg-white p-8 relative">
+          {/* Contact Form */}
+          <div className="lg:col-span-5 relative z-30">
+            <div className="rounded-2xl card-gradient-border bg-white p-8 relative shadow-sm hover:shadow-md transition-shadow">
               {submitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/25">
@@ -162,13 +162,10 @@ export function ContactSection() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5 relative z-10">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
-                      >
+                    <div className="space-y-1.5">
+                      <label htmlFor="name" className="text-sm font-medium text-gray-700">
                         {t.form.name}
                       </label>
                       <input
@@ -177,14 +174,11 @@ export function ContactSection() {
                         type="text"
                         required
                         placeholder={t.form.namePlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
-                      >
+                    <div className="space-y-1.5">
+                      <label htmlFor="company" className="text-sm font-medium text-gray-700">
                         {t.form.company}
                       </label>
                       <input
@@ -192,17 +186,14 @@ export function ContactSection() {
                         id="company"
                         type="text"
                         placeholder={t.form.companyPlaceholder}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
                   </div>
 
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
-                      >
+                    <div className="space-y-1.5">
+                      <label htmlFor="email" className="text-sm font-medium text-gray-700">
                         {t.form.email}
                       </label>
                       <input
@@ -211,14 +202,11 @@ export function ContactSection() {
                         type="email"
                         required
                         placeholder="email@company.com"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
-                      >
+                    <div className="space-y-1.5">
+                      <label htmlFor="phone" className="text-sm font-medium text-gray-700">
                         {t.form.phone}
                       </label>
                       <input
@@ -226,16 +214,13 @@ export function ContactSection() {
                         id="phone"
                         type="tel"
                         placeholder="08X-XXX-XXXX"
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                       />
                     </div>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="mb-1.5 block text-sm font-medium text-gray-700"
-                    >
+                  <div className="space-y-1.5">
+                    <label htmlFor="message" className="text-sm font-medium text-gray-700">
                       {t.form.message}
                     </label>
                     <textarea
@@ -244,7 +229,7 @@ export function ContactSection() {
                       rows={4}
                       required
                       placeholder={t.form.messagePlaceholder}
-                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all pointer-events-auto cursor-text relative z-10"
+                      className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                     />
                   </div>
 
