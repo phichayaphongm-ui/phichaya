@@ -2,7 +2,17 @@
 
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { GalleryBook } from "@/components/gallery-book";
+import dynamic from "next/dynamic";
+
+const GalleryBook = dynamic(() => import("@/components/gallery-book").then(mod => mod.GalleryBook), {
+    ssr: false,
+    loading: () => (
+        <div className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p className="text-gray-400 text-sm font-mono uppercase tracking-[0.2em]">Preparing Gallery...</p>
+        </div>
+    )
+});
 
 export function GalleryBookContent() {
     return (
@@ -44,6 +54,6 @@ export function GalleryBookContent() {
             <section className="pb-20 px-4">
                 <GalleryBook />
             </section>
-        </div >
+        </div>
     );
 }
