@@ -1,4 +1,5 @@
 "use client";
+// Force redeploy to refresh Vercel build hook
 
 import React, { useState } from "react";
 import Image from "next/image";
