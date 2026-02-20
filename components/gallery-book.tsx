@@ -179,11 +179,18 @@ export function GalleryBook() {
     }, []);
 
     useEffect(() => {
-        // Handle window resize
+        // Handle window resize - only update width to avoid jumping when mobile toolbars hide/show
         const handleResize = () => {
-            setWindowSize({
-                width: window.innerWidth,
-                height: window.innerHeight
+            setWindowSize(prev => {
+                // If it's mobile, we keep the initial height to prevent layout shifts
+                const isNowMobile = window.innerWidth < 768;
+                if (isNowMobile && Math.abs(prev.width - window.innerWidth) < 5) {
+                    return prev; // Ignore small changes
+                }
+                return {
+                    width: window.innerWidth,
+                    height: isNowMobile ? prev.height : window.innerHeight
+                };
             });
         };
 
@@ -217,16 +224,25 @@ export function GalleryBook() {
 
     const toggleMute = () => setIsMuted(!isMuted);
 
-    const next = () => bookRef.current?.pageFlip()?.flipNext();
-    const prev = () => bookRef.current?.pageFlip()?.flipPrev();
+    const next = (e?: React.MouseEvent) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        bookRef.current?.pageFlip()?.flipNext();
+    };
+
+    const prev = (e?: React.MouseEvent) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        bookRef.current?.pageFlip()?.flipPrev();
+    };
 
     // Flatten pages to avoid React.Fragment which breaks HTMLFlipBook
     const pages = useMemo(() => {
         const bookPages = [];
-        // ... (Same page content as before, keeping it for continuity)
-        // [omitted for brevity in this replace call as it uses the existing useMemo logic]
-        // Actually, the useMemo logic needs to be fully present if I'm replacing the whole component body.
-        // I will re-include the relevant parts of useMemo to ensure it's complete.
 
         // 1. Cover
         bookPages.push(<Cover key="cover" />);
@@ -383,8 +399,8 @@ export function GalleryBook() {
 
     return (
         <div
-            className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10 relative"
-            style={{ overscrollBehavior: 'none' }}
+            className="flex flex-col items-center justify-center min-h-[550px] sm:min-h-[650px] w-full py-6 sm:py-10 relative overflow-hidden"
+            style={{ overscrollBehavior: 'none', touchAction: 'manipulation' }}
         >
 
             {/* Audio Toggle */}
@@ -416,7 +432,7 @@ export function GalleryBook() {
                 useMouseEvents={true}
                 swipeDistance={30}
                 showPageCorners={true}
-                disableFlipByClick={false}
+                disableFlipByClick={true}
                 onFlip={onFlip}
                 style={{}}
                 startZIndex={0}
