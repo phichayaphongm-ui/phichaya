@@ -354,7 +354,7 @@ export function GalleryBook() {
                                 <img
                                     src={img.src}
                                     alt={img.title}
-                                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                    className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
@@ -382,7 +382,10 @@ export function GalleryBook() {
     );
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10 relative">
+        <div
+            className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10 relative"
+            style={{ overscrollBehavior: 'none' }}
+        >
 
             {/* Audio Toggle */}
             <button
@@ -403,7 +406,7 @@ export function GalleryBook() {
                 maxHeight={700}
                 maxShadowOpacity={0.5}
                 showCover={true}
-                mobileScrollSupport={false}
+                mobileScrollSupport={true}
                 className="shadow-2xl"
                 ref={bookRef}
                 usePortrait={isMobile}
@@ -426,6 +429,7 @@ export function GalleryBook() {
             {/* Controls */}
             <div className="flex items-center gap-4 mt-8">
                 <button
+                    type="button"
                     onClick={prev}
                     className="p-2 sm:p-3 rounded-full bg-white shadow-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all active:scale-95"
                     aria-label="Previous Page"
@@ -436,6 +440,7 @@ export function GalleryBook() {
                     {isMobile ? "SWIPE OR TAP CORNERS" : "CLICK CORNERS OR DRAG TO FLIP"}
                 </div>
                 <button
+                    type="button"
                     onClick={next}
                     className="p-2 sm:p-3 rounded-full bg-white shadow-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all active:scale-95"
                     aria-label="Next Page"
