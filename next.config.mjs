@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true,
+    // Re-enabled for better code quality and security
+    ignoreBuildErrors: false,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    // Re-enabled for better code quality and security
+    ignoreDuringBuilds: false,
   },
   images: {
     unoptimized: true,
@@ -18,10 +20,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://*.youtube.com https://*.ytimg.com https://*.google.com https://*.gstatic.com https://*.googletagmanager.com https://*.google-analytics.com https://*.doubleclick.net https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.ytimg.com https://*.google.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://*.youtube.com https://youtube.com; worker-src 'self' blob:; connect-src 'self' https://*.google-analytics.com;"
           },
-          {
-            key: 'Cache-Control',
-            value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
-          },
+          // Removed manual Cache-Control no-store to allow Next.js default caching strategy
         ],
       },
     ]

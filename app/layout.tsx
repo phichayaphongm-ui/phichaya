@@ -87,9 +87,6 @@ export default function RootLayout({
   return (
     <html lang="th">
       <head>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
       </head>
       <body className={`${kanit.variable} ${inter.variable} font-sans antialiased`}>
         <I18nProvider>

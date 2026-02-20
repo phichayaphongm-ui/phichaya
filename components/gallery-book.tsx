@@ -132,9 +132,9 @@ const Page = forwardRef<HTMLDivElement, PageProps>((props, ref) => {
 });
 Page.displayName = "Page";
 
-const Cover = forwardRef<HTMLDivElement, any>((props, ref) => {
+const Cover = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
     return (
-        <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard">
+        <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard" {...props}>
             <div className="h-full w-full relative overflow-hidden">
                 <img
                     src="/images/gallery/cover-front.png"
@@ -148,9 +148,9 @@ const Cover = forwardRef<HTMLDivElement, any>((props, ref) => {
 });
 Cover.displayName = "Cover";
 
-const EndCover = forwardRef<HTMLDivElement, any>((props, ref) => {
+const EndCover = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>((props, ref) => {
     return (
-        <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard">
+        <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard" {...props}>
             <div className="h-full w-full relative overflow-hidden">
                 <img
                     src="/images/gallery/cover-back.png"
@@ -218,7 +218,7 @@ export function GalleryBook() {
         }
     }, [isMuted]);
 
-    const onFlip = (e: any) => {
+    const onFlip = (e: { data: number }) => {
         playFlipSound();
     };
 
