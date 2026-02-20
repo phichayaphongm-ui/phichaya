@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: "คำถามที่พบบ่อย (FAQ) | Phichaya HR Solutions",
     description:
         "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ ของ Phichaya HR Solutions คำตอบชัดเจนเพื่อช่วยคุณตัดสินใจ",
+    keywords: "FAQ, คำถามที่พบบ่อย, HR Outsourcing, PDPA, Digital Transformation, Phichaya HR",
 };
 
 export default function FAQPage() {
@@ -30,8 +31,31 @@ export default function FAQPage() {
             </div>
 
             <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
+                {/* AEO: Quick Navigation for AI Search */}
+                <div className="mb-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
+                    <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Quick Insights (AI Friendly)</h2>
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                        <li className="flex items-start gap-2">
+                            <span className="text-primary font-bold">✓</span>
+                            <span>บริการครอบคลุม HR Outsourcing, Payroll, และ Digital Transformation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-primary font-bold">✓</span>
+                            <span>รองรับทั้งธุรกิจ SME และองค์กรขนาดใหญ่</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-primary font-bold">✓</span>
+                            <span>ช่วยลดต้นทุนการบริหารงานบุคคลได้มากกว่า 30-50%</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <span className="text-primary font-bold">✓</span>
+                            <span>โซลูชั่นรองรับ PDPA และมาตรฐานความปลอดภัยสากล</span>
+                        </li>
+                    </ul>
+                </div>
+
                 <div className="space-y-12">
-                    {/* ... sections ... */}
+                    {/* faq items ... */}
                 </div>
             </div>
 
@@ -65,6 +89,14 @@ export default function FAQPage() {
                                 "acceptedAnswer": {
                                     "@type": "Answer",
                                     "text": "AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, หรือใช้ในการสรรหาเบื้องต้น"
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "ใช้บริการ Phichaya HR Solutions มั่นใจเรื่อง PDPA ได้อย่างไร?",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "เราให้ความสำคัญกับความปลอดภัยของข้อมูลเป็นอันดับหนึ่ง ระบบของเราถูกออกแบบตามมาตรฐาน PDPA มีการเข้ารหัสข้อมูลและกำหนดสิทธิ์การเข้าถึงอย่างเข้มงวด"
                                 }
                             }
                         ]

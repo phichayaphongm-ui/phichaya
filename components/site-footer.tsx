@@ -1,6 +1,7 @@
 "use client";
 
 import { Facebook } from "lucide-react";
+import Image from "next/image";
 import { LineIcon } from "@/components/line-icon";
 import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
@@ -36,10 +37,11 @@ export function SiteFooter() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/logo.png"
                 alt="Phichaya HR Solutions"
+                width={36}
+                height={36}
                 className="h-9 w-auto brightness-0 invert"
               />
               <span className="text-base font-bold text-white">

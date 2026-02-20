@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X, Globe } from "lucide-react";
+import Image from "next/image";
 import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
 
@@ -40,10 +41,11 @@ export function Navigation() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#home" className="flex items-center gap-3">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/logo.png"
             alt="Phichaya HR Solutions"
+            width={48}
+            height={48}
             className="h-10 w-auto md:h-12"
           />
           <span className="hidden text-lg font-bold text-gray-900 sm:block">
