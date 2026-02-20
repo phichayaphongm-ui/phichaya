@@ -383,22 +383,6 @@ export function GalleryBook() {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-[500px] w-full py-6 sm:py-10 relative">
-            <style jsx global>{`
-                .stf__wrapper {
-                    border-radius: 12px;
-                    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.3);
-                }
-                .custom-scrollbar::-webkit-scrollbar {
-                    width: 3px;
-                }
-                .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                }
-                .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background: rgba(0,0,0,0.1);
-                    border-radius: 10px;
-                }
-            `}</style>
 
             {/* Audio Toggle */}
             <button
