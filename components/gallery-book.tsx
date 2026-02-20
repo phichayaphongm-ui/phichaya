@@ -4,6 +4,7 @@ import React, { forwardRef, useState, useRef, useEffect, useMemo, useCallback } 
 // @ts-ignore
 import HTMLFlipBook from "react-pageflip";
 import { ChevronLeft, ChevronRight, Volume2, VolumeX, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 // Types
 interface PageProps {
@@ -152,10 +153,12 @@ const EndCover = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
     return (
         <div className="demoPage bg-[#1a202c] text-white h-full w-full" ref={ref} data-density="hard" {...props}>
             <div className="h-full w-full relative overflow-hidden">
-                <img
-                    src="/images/gallery/cover-back.png"
-                    alt="End Cover"
-                    className="w-full h-full object-cover shadow-2xl"
+                <Image
+                    src="/images/gallery/cover-back.png" // Used original src
+                    alt="End Cover" // Used original alt
+                    fill
+                    className="object-cover shadow-2xl" // Adapted className
+                    priority
                 />
                 <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)] pointer-events-none"></div>
             </div>
@@ -255,7 +258,7 @@ export function GalleryBook() {
                         <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z" /></svg>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-800 mb-6 italic leading-relaxed">
-                        "Design is not just what it looks like and feels like. Design is how it works."
+                        &quot;Design is not just what it looks like and feels like. Design is how it works.&quot;
                     </h3>
                     <p className="text-primary text-xs font-bold uppercase tracking-widest mb-12">— Steve Jobs</p>
                     <div className="w-8 h-[1px] bg-gray-200 mx-auto mb-8"></div>
@@ -322,7 +325,7 @@ export function GalleryBook() {
                                     The concept
                                 </h4>
                                 <p className="text-gray-800 font-medium leading-relaxed italic text-base sm:text-lg pr-4 text-pretty text-sm sm:text-base">
-                                    "{img.concept}"
+                                    &quot;{img.concept}&quot;
                                 </p>
                             </section>
 
@@ -367,10 +370,11 @@ export function GalleryBook() {
                     <div className="h-full w-full p-1 sm:p-2 flex items-center justify-center">
                         <div className="relative w-full aspect-[3/4.5] rounded-sm overflow-hidden shadow-2xl border border-gray-200/50 bg-white p-1 sm:p-2 group">
                             <div className="w-full h-full relative overflow-hidden rounded-sm border border-gray-100">
-                                <img
+                                <Image
                                     src={img.src}
                                     alt={img.title}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>

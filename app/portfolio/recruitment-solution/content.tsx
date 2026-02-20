@@ -197,12 +197,12 @@ export function RecruitmentSolutionContent() {
                         {t.cta.desc}
                     </p>
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
-                        <a
+                        <Link
                             href="/#contact"
                             className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary to-blue-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:-translate-y-0.5"
                         >
                             {t.cta.consultBtn}
-                        </a>
+                        </Link>
                         <Link
                             href="/#portfolio"
                             className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-8 py-4 text-base font-semibold text-gray-700 transition-all hover:border-primary hover:text-primary hover:shadow-md"

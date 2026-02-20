@@ -103,6 +103,7 @@ export const dictionaries = {
             title: "บทความ",
             subtitle: "เรียนรู้เทรนด์ล่าสุดด้าน HR และ Digital Transformation",
             readMore: "อ่านต่อ",
+            viewAll: "ดูทั้งหมด",
             close: "ปิด",
             consult: "ปรึกษาผู้เชี่ยวชาญ",
             items: {
@@ -452,6 +453,7 @@ export const dictionaries = {
             title: "Articles",
             subtitle: "Learn the latest trends in HR and Digital Transformation",
             readMore: "Read More",
+            viewAll: "View All",
             close: "Close",
             consult: "Consult Expert",
             items: {
