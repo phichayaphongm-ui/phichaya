@@ -345,8 +345,30 @@ export const dictionaries = {
             services: "บริการ",
             contact: "ติดต่อ",
             copyright: "Copyright © 2024 Phichaya HR Solutions. All rights reserved.",
-            privacy: "Privacy Policy",
-            terms: "Terms of Use",
+            privacy: "นโยบายความเป็นส่วนตัว",
+            terms: "เงื่อนไขการใช้งาน",
+        },
+        faq: {
+            title: "คำถามที่พบบ่อย (FAQ)",
+            subtitle: "รวมทุกข้อสงสัยเกี่ยวกับงาน HR และบริการของเรา ตอบโจทย์ทุกความต้องการของธุรกิจยุคใหม่",
+            items: [
+                {
+                    q: "Phichaya HR Solutions ให้บริการอะไรบ้าง?",
+                    a: "เราให้บริการที่ปรึกษาและโซลูชั่นด้าน HR แบบครบวงจร ได้แก่ HR Outsourcing (รับทำเงินเดือน, สรรหาพนักงาน), HR Digital Transformation (ออกแบบระบบ HR, Automation), Training Solutions (จัดฝึกอบรม, สร้างคอร์สออนไลน์), และการพัฒนา Web/Mobile Application สำหรับงาน HR โดยเฉพาะ"
+                },
+                {
+                    q: "บริการ HR Outsourcing เหมาะกับธุรกิจขนาดไหน?",
+                    a: "บริการของเราเหมาะสำหรับธุรกิจทุกขนาด โดยเฉพาะ SME ที่ต้องการลดต้นทุนในการจ้างทีม HR ประจำ และต้องการความเป็นมืออาชีพในการจัดการงานบุคคล"
+                },
+                {
+                    q: "AI Chatbot สำหรับ HR ทำอะไรได้บ้าง?",
+                    a: "AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, หรือใช้ในการสรรหาเบื้องต้น"
+                },
+                {
+                    q: "ใช้บริการ Phichaya HR Solutions มั่นใจเรื่อง PDPA ได้อย่างไร?",
+                    a: "เราให้ความสำคัญกับความปลอดภัยของข้อมูลเป็นอันดับหนึ่ง ระบบของเราถูกออกแบบตามมาตรฐาน PDPA มีการเข้ารหัสข้อมูลและกำหนดสิทธิ์การเข้าถึงอย่างเข้มงวด"
+                }
+            ]
         },
     },
     en: {
@@ -697,6 +719,28 @@ export const dictionaries = {
             copyright: "Copyright © 2024 Phichaya HR Solutions. All rights reserved.",
             privacy: "Privacy Policy",
             terms: "Terms of Use",
+        },
+        faq: {
+            title: "Frequently Asked Questions (FAQ)",
+            subtitle: "Answers to common questions about our HR services and solutions.",
+            items: [
+                {
+                    q: "What services does Phichaya HR Solutions provide?",
+                    a: "We provide comprehensive HR consulting and solutions, including HR Outsourcing (Payroll, Recruitment), HR Digital Transformation (HR Systems, Automation), Training Solutions (E-learning), and Web/Mobile Application development specifically for HR."
+                },
+                {
+                    q: "What business size is HR Outsourcing suitable for?",
+                    a: "Our services are suitable for businesses of all sizes, especially SMEs that want to reduce costs of hiring a full-time HR team and need professional HR management."
+                },
+                {
+                    q: "What can an AI Chatbot for HR do?",
+                    a: "Our AI Chatbot can answer employee questions automatically 24/7, such as leave balance, salary certificate requests, company policies, or initial recruitment screening."
+                },
+                {
+                    q: "How can I be confident about PDPA when using your services?",
+                    a: "Data security is our top priority. Our systems are designed according to PDPA standards, with data encryption and strict access control."
+                }
+            ]
         },
     },
 };

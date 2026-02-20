@@ -103,6 +103,66 @@ export default function RootLayout({
         <I18nProvider>
           {children}
         </I18nProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "@id": "https://phichaya.com/#local-business",
+              "name": "Phichaya HR Solutions",
+              "alternateName": "พิจารยา เอชอาร์ โซลูชั่น",
+              "url": "https://phichaya.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phichaya.com/logo.png"
+              },
+              "image": "https://phichaya.com/logo.png",
+              "description": "Strategic HR Solutions & Digital Transformation Expert for Organizations and SMEs in Thailand.",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Bangkok",
+                "addressLocality": "Bangkok",
+                "addressRegion": "Bangkok",
+                "postalCode": "10200",
+                "addressCountry": "TH"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 13.7563,
+                "longitude": 100.5018
+              },
+              "telephone": "+66-82-646-5526",
+              "priceRange": "฿฿",
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                  ],
+                  "opens": "09:00",
+                  "closes": "18:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.facebook.com/phichaya.hr",
+                "https://www.linkedin.com/company/phichaya-hr"
+              ],
+              "knowsAbout": [
+                "Human Resources",
+                "Digital Transformation",
+                "Recruitment",
+                "Organization Development",
+                "Payroll Management",
+                "Training and Development"
+              ]
+            }),
+          }}
+        />
       </body>
     </html>
   );
