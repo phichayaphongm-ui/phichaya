@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import { CheckCircle2, Trophy, Users, History } from "lucide-react";
 import React from "react";
