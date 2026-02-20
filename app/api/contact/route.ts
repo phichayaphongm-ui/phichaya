@@ -5,6 +5,14 @@ export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error("Missing RESEND_API_KEY environment variable");
+      return NextResponse.json(
+        { error: "Server configuration error: Missing API Key" },
+        { status: 500 }
+      );
+    }
+
     const { name, email, service, message } = await req.json();
 
     if (!name || !email || !service || !message) {
@@ -16,7 +24,7 @@ export async function POST(req: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Phichaya HR Solutions <onboarding@resend.dev>",
-      to: ["contact@phichaya.com"],
+      to: ["phichayaphong.m@gmail.com"],
       subject: `New Contact Inquiry from ${name}`,
       replyTo: email,
       html: `

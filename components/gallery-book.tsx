@@ -403,7 +403,7 @@ export function GalleryBook() {
                 maxHeight={700}
                 maxShadowOpacity={0.5}
                 showCover={true}
-                mobileScrollSupport={true}
+                mobileScrollSupport={false}
                 className="shadow-2xl"
                 ref={bookRef}
                 usePortrait={isMobile}

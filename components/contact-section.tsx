@@ -73,7 +73,9 @@ export function ContactSection() {
         setSubmitted(true);
       } else {
         const errorData = await response.json();
-        alert(`Error: ${errorData.error || "Failed to send message"}`);
+        // Show specific error if available, otherwise generic
+        const errorMessage = errorData.error || "Failed to send message";
+        alert(`Error: ${errorMessage}`);
       }
     } catch (error) {
       console.error("Submission error:", error);

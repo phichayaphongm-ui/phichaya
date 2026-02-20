@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy-prod": "npx vercel --prod --token $VERCEL_TOKEN && npx vercel alias set https://phichaya-fqnysga65-phichayaphongm-6769s-projects.vercel.app phichaya.com --token $VERCEL_TOKEN && npx vercel alias set https://phichaya-fqnysga65-phichayaphongm-6769s-projects.vercel.app www.phichaya.com --token $VERCEL_TOKEN"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
