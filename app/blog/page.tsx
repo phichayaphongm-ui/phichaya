@@ -38,8 +38,12 @@ export default function BlogListPage() {
                         {blogPosts.map((post) => (
                             <article key={post.slug} className="flex flex-col items-start justify-between">
                                 <div className="relative w-full">
-                                    <div className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] flex items-center justify-center text-gray-400">
-                                        <span className="text-sm">Image Placeholder: {post.slug}</span>
+                                    <div className="aspect-[16/9] w-full rounded-2xl bg-gray-100 overflow-hidden sm:aspect-[2/1] lg:aspect-[3/2]">
+                                        <img
+                                            src={post.image}
+                                            alt={post.title[language]}
+                                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                        />
                                     </div>
                                     <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                                 </div>

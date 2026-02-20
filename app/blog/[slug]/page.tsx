@@ -44,9 +44,24 @@ export default function BlogPostPage() {
                         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
                             {post.title[language]}
                         </h1>
-                        <div className="flex items-center gap-4 text-sm text-gray-600">
-                            <User className="w-4 h-4" />
-                            <span>{post.author}</span>
+                        <div className="flex items-center gap-4 text-sm text-gray-600 mb-8">
+                            <div className="flex items-center gap-2">
+                                <User className="w-4 h-4" />
+                                <span>{post.author}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <Calendar className="w-4 h-4" />
+                                <span>{post.date}</span>
+                            </div>
+                        </div>
+
+                        {/* Blog Image */}
+                        <div className="aspect-[16/9] w-full rounded-3xl overflow-hidden bg-gray-100 mb-12 shadow-xl ring-1 ring-gray-900/10">
+                            <img
+                                src={post.image}
+                                alt={post.title[language]}
+                                className="h-full w-full object-cover"
+                            />
                         </div>
                     </header>
 
