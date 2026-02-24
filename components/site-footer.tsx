@@ -12,13 +12,13 @@ export function SiteFooter() {
   const navT = dictionaries[language].nav;
 
   const quickLinks = [
-    { href: "#home", label: navT.home },
+    { href: "/#home", label: navT.home },
     { href: "/about", label: navT.about },
-    { href: "#services", label: navT.services },
+    { href: "/#services", label: navT.services },
     { href: "/faq", label: language === 'th' ? "คำถามที่พบบ่อย (FAQ)" : "FAQ" },
-    { href: "#portfolio", label: navT.portfolio },
-    { href: "#articles", label: navT.articles },
-    { href: "#contact", label: navT.contact },
+    { href: "/#portfolio", label: navT.portfolio },
+    { href: "/#articles", label: navT.articles },
+    { href: "/#contact", label: navT.contact },
   ];
 
   const serviceLinks = [
