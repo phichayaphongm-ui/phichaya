@@ -18,8 +18,6 @@ export function HeroSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!mounted) return null;
-
   return (
     <section
       id="home"
