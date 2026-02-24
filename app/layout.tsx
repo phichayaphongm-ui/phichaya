@@ -44,19 +44,23 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
+  alternates: {
+    canonical: "https://phichaya.com",
+    languages: {
+      "th-TH": "https://phichaya.com",
+      "en-US": "https://phichaya.com",
+    },
+  },
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
-  },
-  alternates: {
-    canonical: "/",
   },
   openGraph: {
     type: "website",

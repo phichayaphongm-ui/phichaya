@@ -310,7 +310,7 @@ export const blogPosts: BlogPost[] = [
         date: "2026-02-10",
         author: "Legal Expert",
         category: "Legal",
-        image: "/images/blog/hr-digital-transformation-2026.jpg", // Fallback for now
+        image: "/images/blog/pdpa-for-hr.jpg", // Distinct from other posts
         title: {
             th: "เจาะลึก PDPA สำหรับ HR: ข้อควรระวังและการจัดการข้อมูลพนักงาน",
             en: "Deep Dive into PDPA for HR: Precautions and Employee Data Management"
