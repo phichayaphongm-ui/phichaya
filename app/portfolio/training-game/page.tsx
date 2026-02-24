@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "/portfolio/training-game",
+        canonical: "https://phichaya.com/portfolio/training-game",
     },
 };
 

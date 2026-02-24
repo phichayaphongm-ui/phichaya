@@ -354,19 +354,39 @@ export const dictionaries = {
             items: [
                 {
                     q: "Phichaya HR Solutions ให้บริการอะไรบ้าง?",
-                    a: "เราให้บริการที่ปรึกษาและโซลูชั่นด้าน HR แบบครบวงจร ได้แก่ HR Outsourcing (รับทำเงินเดือน, สรรหาพนักงาน), HR Digital Transformation (ออกแบบระบบ HR, Automation), Training Solutions (จัดฝึกอบรม, สร้างคอร์สออนไลน์), และการพัฒนา Web/Mobile Application สำหรับงาน HR โดยเฉพาะ"
+                    a: "เราให้บริการที่ปรึกษาและโซลูชั่นด้าน HR แบบครบวงจร ได้แก่ HR Outsourcing (รับทำเงินเดือน, สรรหาพนักงาน), HR Digital Transformation (ออกแบบระบบ HR, Automation), Training Solutions (จัดฝึกอบรม, สร้างคอร์สออนไลน์), Resume/CV Writing, Website Development สำหรับองค์กร, Organization Development และการพัฒนา Web/Mobile Application สำหรับงาน HR โดยเฉพาะ"
                 },
                 {
                     q: "บริการ HR Outsourcing เหมาะกับธุรกิจขนาดไหน?",
-                    a: "บริการของเราเหมาะสำหรับธุรกิจทุกขนาด โดยเฉพาะ SME ที่ต้องการลดต้นทุนในการจ้างทีม HR ประจำ และต้องการความเป็นมืออาชีพในการจัดการงานบุคคล"
+                    a: "บริการของเราเหมาะสำหรับธุรกิจทุกขนาด ตั้งแต่ SME ที่มีพนักงาน 10-200 คนที่ต้องการลดต้นทุนการจ้างทีม HR ประจำ ไปจนถึงองค์กรขนาดใหญ่ที่ต้องการระบบ HR ที่มีประสิทธิภาพและสอดคล้องกับกฎหมายแรงงานไทย"
                 },
                 {
                     q: "AI Chatbot สำหรับ HR ทำอะไรได้บ้าง?",
-                    a: "AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, หรือใช้ในการสรรหาเบื้องต้น"
+                    a: "AI Chatbot ของเราสามารถตอบคำถามพนักงานได้อัตโนมัติ 24 ชม. เช่น วันลาคงเหลือ, ขอใบรับรองเงินเดือน, นโยบายบริษัท, สวัสดิการ หรือใช้ในการสรรหาเบื้องต้น รองรับการเชื่อมต่อผ่าน LINE, Facebook Messenger และ Telegram"
                 },
                 {
                     q: "ใช้บริการ Phichaya HR Solutions มั่นใจเรื่อง PDPA ได้อย่างไร?",
-                    a: "เราให้ความสำคัญกับความปลอดภัยของข้อมูลเป็นอันดับหนึ่ง ระบบของเราถูกออกแบบตามมาตรฐาน PDPA มีการเข้ารหัสข้อมูลและกำหนดสิทธิ์การเข้าถึงอย่างเข้มงวด"
+                    a: "เราให้ความสำคัญกับความปลอดภัยของข้อมูลเป็นอันดับหนึ่ง ระบบของเราถูกออกแบบตามมาตรฐาน PDPA พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 มีการเข้ารหัสข้อมูล (Encryption) และกำหนดสิทธิ์การเข้าถึง (Access Control) อย่างเข้มงวด"
+                },
+                {
+                    q: "ค่าบริการของ Phichaya HR Solutions คิดอย่างไร?",
+                    a: "ค่าบริการขึ้นอยู่กับขอบเขตงาน จำนวนพนักงาน และระดับบริการที่ต้องการ เราให้บริการแบบ Package รายเดือนสำหรับ HR Consulting และแบบ Project-based สำหรับงานพัฒนาระบบ กรุณาติดต่อเราเพื่อรับใบเสนอราคาที่ตรงกับความต้องการของคุณ โดยไม่มีค่าใช้จ่าย"
+                },
+                {
+                    q: "เริ่มใช้บริการ HR Outsourcing ใช้เวลานานแค่ไหน?",
+                    a: "โดยทั่วไปใช้เวลา 2-4 สัปดาห์ในการ Set-up ระบบและถ่ายโอนข้อมูล ขึ้นอยู่กับความซับซ้อนของโครงสร้างองค์กร ทีมงานของเราจะ Support และ Handover อย่างครบถ้วนเพื่อให้การเปลี่ยนผ่านราบรื่นที่สุด"
+                },
+                {
+                    q: "Phichaya HR Solutions ทำระบบเงินเดือนและการคำนวณภาษีได้ไหม?",
+                    a: "ได้ครับ/ค่ะ เราให้บริการระบบเงินเดือนครบวงจร รวมถึงการคำนวณภาษีหัก ณ ที่จ่าย (50 ทวิ, ภงด.1), ประกันสังคม, กองทุนเงินทดแทน และกองทุนสำรองเลี้ยงชีพ พร้อมรายงานสรุปรายเดือนและรายปีที่ถูกต้องตามกฎหมาย"
+                },
+                {
+                    q: "บริการ Training Solutions ของ Phichaya ช่วยอะไรได้บ้าง?",
+                    a: "บริการของเราครอบคลุมการออกแบบหลักสูตรฝึกอบรม (Instructional Design), การพัฒนา E-learning, การสร้าง Training Game แบบ Scenario-based, การจัดการระบบ Training Record และ Training Roadmap เหมาะสำหรับทั้งการฝึกอบรมพนักงานใหม่ (Onboarding) และ Upskilling/Reskilling"
+                },
+                {
+                    q: "Phichaya HR Solutions แตกต่างจากบริษัท HR Consulting อื่นอย่างไร?",
+                    a: "จุดแข็งของเราคือการผสมผสานความเชี่ยวชาญด้าน HR มากกว่า 15 ปีเข้ากับความสามารถด้านเทคโนโลยีและการพัฒนาซอฟต์แวร์ ทำให้เราสามารถออกแบบโซลูชั่นที่ครบวงจรกว่า ทั้ง Strategy, Process และ Tech Platform ในที่เดียว ไม่ใช่เพียงคำปรึกษา แต่ลงมือทำจริง"
                 }
             ]
         },
@@ -726,19 +746,39 @@ export const dictionaries = {
             items: [
                 {
                     q: "What services does Phichaya HR Solutions provide?",
-                    a: "We provide comprehensive HR consulting and solutions, including HR Outsourcing (Payroll, Recruitment), HR Digital Transformation (HR Systems, Automation), Training Solutions (E-learning), and Web/Mobile Application development specifically for HR."
+                    a: "We provide comprehensive HR consulting and solutions, including HR Outsourcing (Payroll, Recruitment), HR Digital Transformation (HR Systems, Automation), Training Solutions (E-learning, Training Games), Resume/CV Writing, Website Development, Organization Development, and Web/Mobile Application development specifically for HR."
                 },
                 {
                     q: "What business size is HR Outsourcing suitable for?",
-                    a: "Our services are suitable for businesses of all sizes, especially SMEs that want to reduce costs of hiring a full-time HR team and need professional HR management."
+                    a: "Our services are suitable for businesses of all sizes, from SMEs with 10-200 employees looking to reduce the cost of a full-time HR team, to large enterprises needing efficient HR systems that comply with Thai labor law."
                 },
                 {
                     q: "What can an AI Chatbot for HR do?",
-                    a: "Our AI Chatbot can answer employee questions automatically 24/7, such as leave balance, salary certificate requests, company policies, or initial recruitment screening."
+                    a: "Our AI Chatbot can answer employee questions automatically 24/7, such as leave balance, salary certificate requests, company policies, benefits information, or initial recruitment screening. It integrates with LINE, Facebook Messenger, and Telegram."
                 },
                 {
                     q: "How can I be confident about PDPA when using your services?",
-                    a: "Data security is our top priority. Our systems are designed according to PDPA standards, with data encryption and strict access control."
+                    a: "Data security is our top priority. Our systems are designed according to the PDPA (Personal Data Protection Act B.E. 2562) standards, with data encryption and strict access control policies throughout."
+                },
+                {
+                    q: "How is Phichaya HR Solutions priced?",
+                    a: "Pricing depends on the scope of work, number of employees, and service level required. We offer monthly packages for HR Consulting and project-based pricing for system development. Contact us for a free, no-obligation proposal tailored to your organization."
+                },
+                {
+                    q: "How long does it take to get started with HR Outsourcing?",
+                    a: "Generally, it takes 2-4 weeks to set up the system and transfer data, depending on the complexity of your organization's structure. Our team will provide full support and handover to ensure the transition is as smooth as possible."
+                },
+                {
+                    q: "Can Phichaya HR Solutions handle payroll and tax calculation?",
+                    a: "Yes. We provide comprehensive payroll services, including withholding tax (50 Tawi, PND1), Social Security, Workmen's Compensation Fund, and Provident Fund. We deliver accurate monthly and annual reports compliant with Thai law."
+                },
+                {
+                    q: "What does the Training Solutions service cover?",
+                    a: "Our service covers curriculum design (Instructional Design), E-learning development, Scenario-based Training Games, Training Record management, and Training Roadmaps. It's suitable for both new employee onboarding and Upskilling/Reskilling programs."
+                },
+                {
+                    q: "How is Phichaya HR Solutions different from other HR Consulting companies?",
+                    a: "Our key strength is combining over 15 years of HR expertise with technology and software development capabilities. This allows us to design more comprehensive solutions covering Strategy, Process, and Tech Platform in one place — we don't just advise, we execute."
                 }
             ]
         },

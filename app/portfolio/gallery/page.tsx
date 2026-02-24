@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "/portfolio/gallery",
+        canonical: "https://phichaya.com/portfolio/gallery",
     },
 };
 
