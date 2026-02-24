@@ -131,11 +131,25 @@ export default function AboutContent() {
             <section className="py-28 bg-white relative overflow-hidden">
                 <div className="absolute bottom-0 right-0 w-80 h-80 gradient-blob gradient-blob-cyan opacity-10" />
                 <div className="mx-auto max-w-7xl px-6 relative z-10">
-                    <div className="text-center mb-20">
+                    <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-6">{t.pptModel.title}</h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                        <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-12">
                             {t.pptModel.subtitle}
                         </p>
+
+                        {/* PPT Model Diagram */}
+                        <div className="max-w-4xl mx-auto mb-16 relative group">
+                            <div className="absolute inset-0 bg-primary/5 rounded-[3rem] blur-3xl group-hover:bg-primary/10 transition-colors duration-700" />
+                            <div className="relative rounded-[3rem] overflow-hidden border border-gray-100 shadow-2xl bg-white p-4">
+                                <Image
+                                    src="/images/blog/3pillars.png"
+                                    alt="PPT Model: People, Process, Technology"
+                                    width={1200}
+                                    height={800}
+                                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     <div className="grid gap-10 md:grid-cols-3">
