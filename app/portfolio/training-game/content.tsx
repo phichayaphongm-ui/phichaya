@@ -1,7 +1,5 @@
 "use client";
 
-import { Navigation } from "@/components/navigation";
-import { SiteFooter } from "@/components/site-footer";
 import {
     Gamepad2,
     MessageCircle,
@@ -68,8 +66,7 @@ export function TrainingGameContent() {
     ];
 
     return (
-        <div className="bg-white min-h-screen">
-            <Navigation />
+        <div className="bg-white">
 
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
@@ -310,8 +307,6 @@ export function TrainingGameContent() {
                     </div>
                 </div>
             </section>
-
-            <SiteFooter />
         </div>
     );
 }

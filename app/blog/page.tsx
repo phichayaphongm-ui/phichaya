@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { BlogListContent } from "./content";
+import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title: "บทความและความรู้ด้าน HR | Phichaya HR Solutions",
@@ -8,5 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default function BlogListPage() {
-    return <BlogListContent />;
+    return (
+        <main>
+            <Navigation />
+            <BlogListContent />
+            <SiteFooter />
+            <BackToTop />
+        </main>
+    );
 }

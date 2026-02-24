@@ -48,6 +48,10 @@ export async function generateMetadata(
     };
 }
 
+import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
+
 export default async function BlogPostPage({ params }: Props) {
     const slug = (await params).slug;
     const post = blogPosts.find((p) => p.slug === slug);
@@ -78,12 +82,15 @@ export default async function BlogPostPage({ params }: Props) {
     };
 
     return (
-        <>
+        <main>
+            <Navigation />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <BlogPostContent post={post} />
-        </>
+            <SiteFooter />
+            <BackToTop />
+        </main>
     );
 }

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { TrainingGameContent } from "./content";
 import { StructuredData } from "@/components/structured-data";
+import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title:
@@ -39,9 +42,12 @@ export const metadata: Metadata = {
 
 export default function TrainingGamePage() {
     return (
-        <>
+        <main>
             <StructuredData type="organization" page="portfolio" />
+            <Navigation />
             <TrainingGameContent />
-        </>
+            <SiteFooter />
+            <BackToTop />
+        </main>
     );
 }

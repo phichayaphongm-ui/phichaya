@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { Navigation } from "@/components/navigation";
-import { SiteFooter } from "@/components/site-footer";
 import { blogPosts } from "@/lib/blog-data";
 import { useLanguage } from "@/lib/i18n-context";
 import Link from "next/link";
@@ -12,8 +10,7 @@ export function BlogListContent() {
     const { language } = useLanguage();
 
     return (
-        <main className="min-h-screen bg-white">
-            <Navigation />
+        <div className="min-h-screen bg-white">
 
             {/* Header */}
             <section className="bg-gray-50 pt-32 pb-16">
@@ -75,8 +72,6 @@ export function BlogListContent() {
                     </div>
                 </div>
             </section>
-
-            <SiteFooter />
-        </main>
+        </div>
     );
 }

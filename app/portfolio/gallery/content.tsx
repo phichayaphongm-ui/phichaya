@@ -16,22 +16,7 @@ const GalleryBook = dynamic(() => import("@/components/gallery-book").then(mod =
 
 export function GalleryBookContent() {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50">
-            {/* Header */}
-            <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50">
-                <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-                    <Link
-                        href="/#portfolio"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        กลับหน้าหลัก
-                    </Link>
-                    <span className="text-xs text-gray-400 font-mono hidden sm:block">
-                        Phichaya HR Solutions
-                    </span>
-                </div>
-            </header>
+        <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 pt-20">
 
             {/* Hero */}
             <section className="py-12 md:py-16 text-center px-6">

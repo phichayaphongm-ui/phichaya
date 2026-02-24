@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { GalleryBookContent } from "./content";
 import { StructuredData } from "@/components/structured-data";
+import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title: "ตัวอย่างผลงานเว็บไซต์ | พาธุรกิจคุณออกสู่โลกกว้าง | Phichaya HR Solutions",
@@ -38,9 +41,12 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
     return (
-        <>
+        <main>
             <StructuredData type="organization" page="portfolio" />
+            <Navigation />
             <GalleryBookContent />
-        </>
+            <SiteFooter />
+            <BackToTop />
+        </main>
     );
 }
