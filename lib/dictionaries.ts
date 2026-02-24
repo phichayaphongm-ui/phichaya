@@ -27,36 +27,45 @@ export const dictionaries = {
                 "Digital HR Transformation": {
                     title: "Digital HR Transformation",
                     desc: "ออกแบบและวางแผนองค์กรสำหรับการทำ Digital Transformation",
+                    fullDesc: "นำเทคโนโลยีสมัยใหม่มายกระดับกระบวนการ HR ทั้งหมดขององค์กรคุณ — ตั้งแต่การวิเคราะห์ Workflow ปัจจุบัน วางแผน Roadmap ดิจิทัล ออกแบบระบบ เงินเดือน ระบบสรรหา ระบบประเมินผล ไปจนถึงการ Automate งาน HR ที่ซ้ำซ้อน ช่วยลดต้นทุน เพิ่มความแม่นยำ และทำให้ทีม HR มีเวลาไปโฟกัสกับงานเชิงกลยุทธ์ที่สร้างคุณค่าให้องค์กรได้จริง",
                 },
                 "HR Consulting": {
                     title: "HR Consulting",
                     desc: "ที่ปรึกษา HR รายเดือน เหมาะสำหรับ SME",
+                    fullDesc: "ทีมผู้เชี่ยวชาญ HR ประสบการณ์กว่า 15 ปี พร้อมเป็นที่ปรึกษาองค์กรของคุณแบบรายเดือน ครอบคลุม กฎหมายแรงงาน นโยบาย HR ระบบประเมินผล KPI/OKRs การออกแบบโครงสร้างเงินเดือน และการวางแผนพัฒนาองค์กร — เหมาะสำหรับ SME ที่ต้องการความเป็นมืออาชีพโดยไม่ต้องจ้าง HR ประจำ ประหยัดค่าใช้จ่ายได้มากกว่า 50%",
                 },
                 "Recruitment Services": {
                     title: "Recruitment Services",
                     desc: "บริการสรรหาพนักงานทุกระดับ",
+                    fullDesc: "สรรหาและคัดกรองผู้สมัครงานคุณภาพสูงสำหรับทุกตำแหน่ง ตั้งแต่ระดับปฏิบัติการไปจนถึงผู้บริหาร ด้วยกระบวนการ Sourcing หลายช่องทาง ทั้ง Job Board, LinkedIn, เครือข่ายมืออาชีพ และการทำ Headhunting — พร้อมระบบทดสอบทักษะ, สัมภาษณ์เชิงพฤติกรรม (Competency-Based) และรายงานผลการคัดกรองที่ละเอียด เพื่อให้คุณตัดสินใจจ้างได้อย่างมั่นใจ",
                 },
                 "Organization Development": {
                     title: "Organization Development",
                     desc: "ออกแบบโครงสร้างการบริหาร และ Organization Chart",
+                    fullDesc: "วิเคราะห์และออกแบบโครงสร้างองค์กรใหม่ให้สอดรับกับทิศทางธุรกิจ ครอบคลุม การจัดทำ Organization Chart, Job Description, Career Path, Competency Framework และการวางระบบ Performance Management — เพื่อให้แต่ละแผนกและตำแหน่งงานมีบทบาทที่ชัดเจน ลดความซ้ำซ้อน และเพิ่มประสิทธิภาพการทำงานทั้งองค์กร",
                 },
                 "HR Systems & Apps": {
                     title: "HR Systems & Apps",
                     desc: "สร้าง Web App และ Application ขององค์กร",
+                    fullDesc: "พัฒนาซอฟต์แวร์ HR แบบ Custom ที่ตรงกับ Workflow จริงขององค์กรคุณโดยเฉพาะ ไม่ว่าจะเป็น ระบบสรรหาออนไลน์, ระบบเงินเดือนและภาษี (50 ทวิ, ภงด., ประกันสังคม), ระบบ E-leave, ระบบ Training Record, AI Chatbot สำหรับพนักงาน หรือ Dashboard สำหรับผู้บริหาร — รองรับทั้ง Web App และ Mobile App",
                 },
                 "Resume/CV Writing": {
                     title: "Resume/CV Writing",
                     desc: "รับทำ Resume/CV/Portfolio (ไทย, อังกฤษ, จีน, ญี่ปุ่น)",
+                    fullDesc: "รับเขียนและออกแบบ Resume, CV และ Portfolio อย่างมืออาชีพ หลายภาษา (ไทย, อังกฤษ, จีน, ญี่ปุ่น) โดยนักเขียน Content และ HR ผู้เชี่ยวชาญ — เน้นการนำเสนอจุดแข็งและประสบการณ์ที่โดดเด่น ATS-Friendly ผ่านระบบ Scan อัตโนมัติ เพิ่มโอกาสได้รับการสัมภาษณ์งานในฝันของคุณ",
                 },
                 "Website Development": {
                     title: "Website Development",
                     desc: "ออกแบบและสร้าง Website ธุรกิจ หรือ HR Corporate Branding",
+                    fullDesc: "ออกแบบและพัฒนาเว็บไซต์ระดับมืออาชีพสำหรับองค์กร ด้วย Design สวยงาม โหลดเร็ว และรองรับทุกอุปกรณ์ ครอบคลุม เว็บไซต์บริษัท, Landing Page, เว็บ E-commerce, Corporate HR Portal, และเว็บไซต์ CSR/Sustainability — พร้อมดูแล SEO On-page ตั้งแต่เริ่มต้น เพื่อให้กลุ่มเป้าหมายค้นหาเจอบน Google ได้ง่าย",
                 },
                 "Training Solutions": {
                     title: "Training Solutions",
                     desc: "วางระบบฝึกอบรม E-learning และ Training Management",
+                    fullDesc: "ออกแบบและวางระบบการพัฒนาบุคลากรแบบครบวงจร ตั้งแต่ การวิเคราะห์ Training Needs, ออก Training Roadmap, สร้างหลักสูตร E-learning แบบ Scenario ที่น่าสนใจ, Training Game จำลองสถานการณ์จริง ไปจนถึงระบบ Training Record และรายงานผล — ช่วยให้พนักงานเกิดการเรียนรู้จริงและสามารถวัดผลได้เป็นตัวเลข",
                 },
             },
+
             viewAll: "ดูทั้งหมด",
         },
         portfolio: {

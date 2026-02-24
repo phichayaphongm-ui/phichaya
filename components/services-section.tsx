@@ -11,6 +11,7 @@ import {
   Globe,
   GraduationCap,
   ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
@@ -104,11 +105,68 @@ function AnimatedCard({
   );
 }
 
+function ServiceCard({ service, item }: { service: typeof services[0]; item: { title: string; desc: string; fullDesc?: string } }) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = Boolean(item.fullDesc);
+
+  return (
+    <div className="group card-gradient-border flex h-full flex-col rounded-2xl p-6 transition-all duration-400 hover:-translate-y-2 relative overflow-hidden bg-white">
+      <div className="relative z-10 flex flex-col h-full">
+        <div className="flex-1">
+          <div className="icon-glow flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/15 mb-6 group-hover:scale-110 group-hover:shadow-primary/30 transition-all duration-300">
+            <service.icon className="h-7 w-7" />
+          </div>
+          <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+            {item.title}
+          </h3>
+
+          {/* Description with expand */}
+          <div>
+            <p
+              className={`text-sm text-gray-500 leading-relaxed transition-all duration-300 ${expanded ? "" : "line-clamp-2"
+                }`}
+            >
+              {expanded && item.fullDesc ? item.fullDesc : item.desc}
+            </p>
+            {hasMore && (
+              <button
+                onClick={() => setExpanded((v) => !v)}
+                className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-blue-700 transition-colors"
+              >
+                {expanded ? (
+                  <>ย่อลง <ChevronUp className="h-3.5 w-3.5" /></>
+                ) : (
+                  <>อ่านต่อ... <ChevronDown className="h-3.5 w-3.5" /></>
+                )}
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Video Player */}
+        {service.video && (
+          <div className="mt-6 rounded-xl overflow-hidden shadow-md ring-1 ring-gray-100 z-20 group-hover:shadow-lg transition-shadow">
+            <video
+              poster={service.thumbnail}
+              preload="metadata"
+              playsInline
+              controls
+              className="w-full h-auto"
+              title={item.title}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <source src={service.video} type="video/mp4" />
+            </video>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export function ServicesSection() {
   const { language } = useLanguage();
   const t = dictionaries[language].services;
-
-  const displayedServices = services;
 
   return (
     <section id="services" className="section-gray py-28 relative overflow-hidden">
@@ -130,44 +188,12 @@ export function ServicesSection() {
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {displayedServices.map((service, index) => {
+          {services.map((service, index) => {
             // @ts-ignore
             const item = t.items[service.id];
             return (
               <AnimatedCard key={service.id} delay={index * 80}>
-                <div className="group card-gradient-border flex h-full flex-col rounded-2xl p-6 transition-all duration-400 hover:-translate-y-2 relative overflow-hidden bg-white">
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex-1">
-                      <div className="icon-glow flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg shadow-primary/15 mb-6 group-hover:scale-110 group-hover:shadow-primary/30 transition-all duration-300">
-                        <service.icon className="h-7 w-7" />
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    {/* Video Player */}
-                    {/* @ts-ignore */}
-                    {service.video && (
-                      <div className="mt-6 rounded-xl overflow-hidden shadow-md ring-1 ring-gray-100 z-20 group-hover:shadow-lg transition-shadow">
-                        <video
-                          poster={service.thumbnail}
-                          preload="metadata"
-                          playsInline
-                          controls
-                          className="w-full h-auto"
-                          title={item.title}
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <source src={service.video} type="video/mp4" />
-                        </video>
-                      </div>
-                    )}
-                  </div>
-                </div>
+                <ServiceCard service={service} item={item} />
               </AnimatedCard>
             );
           })}
@@ -176,3 +202,4 @@ export function ServicesSection() {
     </section>
   );
 }
+
