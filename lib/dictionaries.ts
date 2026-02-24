@@ -399,6 +399,87 @@ export const dictionaries = {
                 }
             ]
         },
+        about: {
+            hero: {
+                title: "พันธมิตรเชิงกลยุทธ์ด้าน HR และ AI เพื่อการเติบโตอย่างยั่งยืนขององค์กร",
+                description: "เราคือผู้เชี่ยวชาญการขับเคลื่อนองค์กรผ่านการบูรณาการศักยภาพของบุคลากรเข้ากับเทคโนโลยีสมัยใหม่ เพื่อสร้างความได้เปรียบทางการแข่งขันในยุคดิจิทัลอย่างมืออาชีพ",
+            },
+            whoWeAre: {
+                title: "เราคือใคร",
+                p1: "Phichaya HR Solutions ก่อตั้งขึ้นจากความมุ่งมั่นที่จะเป็นที่ปรึกษา HR (HR Consulting Thailand) ที่ตอบโจทย์การเปลี่ยนแปลงของโลกธุรกิจสมัยใหม่ เราทำหน้าที่เป็นพาร์ทเนอร์เชิงกลยุทธ์ที่ช่วยวางรากฐานการบริหารคนและระบบงานอย่างยั่งยืน",
+                p2: "ด้วยความเชี่ยวชาญเชิงลึกในด้าน AI Recruitment และ HR Digital Transformation เราเชื่อมั่นในจุดยืนที่ว่า การเติบโตของธุรกิจต้องเริ่มต้นจากระบบการจัดการที่มีประสิทธิภาพและการใช้เทคโนโลยีที่เพิ่มขีดความสามารถให้กับบุคลากร",
+                stats: [
+                    { value: "15+ ปี", label: "ประสบการณ์ระดับที่ปรึกษา" },
+                    { value: "Custom", label: "บริการในแบบคุณ" },
+                    { value: "Reasonable", label: "ราคามิตรภาพ" },
+                ]
+            },
+            visionMission: {
+                visionTitle: "วิสัยทัศน์ (Vision)",
+                visionDesc: "เป็นผู้นำด้านการให้คำปรึกษาทรัพยากรบุคคลและนวัตกรรม HR ครบวงจร ที่ขับเคลื่อนความสำเร็จขององค์กรด้วยคนและเทคโนโลยีในระดับสากล",
+                missionTitle: "พันธกิจ (Mission)",
+                missionDesc: "มอบโซลูชั่นที่สร้างผลลัพธ์ที่จับต้องได้จริง (Tangible Results) ผ่านกระบวนการออกแบบระดับมืออาชีพ เพื่อยกระดับบุคลากร พลิกโฉมองค์กร และร่วมสร้างการเติบโตอย่างมั่นคงไปพร้อมกับลูกค้า",
+            },
+            pptModel: {
+                title: "กรอบแนวคิดเชิงกลยุทธ์ของเรา: PPT Model",
+                subtitle: "หัวใจสำคัญของการทำ Organizational Transformation คือความสมดุลและความสอดประสานกันของ 3 องค์ประกอบหลัก",
+                peopleTitle: "P – People",
+                peopleItems: [
+                    "กลยุทธ์บริหารทรัพยากรบุคคลเชิงรุก",
+                    "Leadership Development",
+                    "Performance Management",
+                    "การสร้างวัฒนธรรมองค์กร"
+                ],
+                processTitle: "P – Process",
+                processItems: [
+                    "การออกแบบโครงสร้างและระบบ HR",
+                    "Recruitment Process Optimization",
+                    "HR Workflow & Policy Design",
+                    "PDPA และ Compliance สำหรับ HR"
+                ],
+                techTitle: "T – Technology",
+                techItems: [
+                    "AI Recruitment Technology",
+                    "Digital HR Platform & Mobile App",
+                    "HR Analytics & Data Dashboard",
+                    "Automation และ Data-Driven HR"
+                ],
+                footer: "เราบูรณาการทั้ง 3 องค์ประกอบเข้าด้วยกัน เพื่อขับเคลื่อนองค์กรให้เคลื่อนที่ได้เร็วขึ้น แม่นยำมากขึ้น และเติบโตอย่างมีทิศทางในระยะยาว"
+            },
+            differentiation: {
+                title: "สิ่งที่ทำให้เราแตกต่าง",
+                subtitle: "ความเป็นพาร์ทเนอร์ไม่ได้วัดกันเพียงแค่งานเสร็จ แต่คือการสร้างคุณค่าที่เหนือกว่าผ่านวิธีการคิดที่เป็นระบบ",
+                items: [
+                    { title: "Strategic Thinking", desc: "ไม่ได้มองแค่การแก้ปัญหาระยะสั้น แต่มองไปถึงเป้าหมายธุรกิจระยะยาวของลูกค้า" },
+                    { title: "Data-Driven Approach", desc: "ใช้ข้อมูลและการวิเคราะห์เพื่อการตัดสินใจที่แม่นยำและเที่ยงธรรม" },
+                    { title: "Customized HR Architecture", desc: "ออกแบบระบบที่พอดีกับความต้องการ ไม่ใช้สูตรสำเร็จรูป" },
+                    { title: "Long-Term Partnership Mindset", desc: "อยู่เคียงข้างลูกค้าในฐานะทีมเดียวกันเพื่อผลประโยชน์สูงสุดของโครงการ" },
+                ]
+            },
+            coreValues: {
+                title: "ค่านิยมของเรา (Core Values)",
+                items: [
+                    { title: "Strategic Professionalism", desc: "ส่งมอบงานด้วยความเป็นมืออาชีพสูงสุด ภายใต้กรอบความคิดเชิงกลยุทธ์ที่คมชัด" },
+                    { title: "Data-Driven Innovation", desc: "ขับเคลื่อนนวัตกรรมด้วยฐานข้อมูลเชิงวิเคราะห์ เพื่อผลลัพธ์ที่มีประสิทธิภาพสูงสุด" },
+                    { title: "Integrity & Trust", desc: "รักษาความถูกต้อง โปร่งใส และสร้างความไว้วางใจในฐานะคู่ค้าที่ซื่อสัตย์" },
+                    { title: "Human-Centered Impact", desc: "ให้ความสำคัญกับการสร้างผลกระทบเชิงบวกต่อตัวตนและคุณภาพชีวิตของคนในองค์กร" },
+                    { title: "Continuous Transformation", desc: "มุ่งมั่นพัฒนาและปรับเปลี่ยนตัวเองให้ก้าวทันความเปลี่ยนแปลงของเทคโนโลยีอยู่เสมอ" },
+                ]
+            },
+            whyUs: {
+                title: "เหตุผลที่องค์กรชั้นนำเลือกเรา",
+                items: [
+                    { title: "ความเชี่ยวชาญเฉพาะด้านที่ครบวงจร", desc: "เราเข้าใจทั้งศาสตร์ของทรัพยากรบุคคลและระบบวิศวกรรมเทคโนโลยี จึงทำให้โซลูชั่นของเราใช้งานได้จริงแบบไม่มีรอยต่อ" },
+                    { title: "โซลูชั่นที่ปรับตามหน้างานจริง (Custom-Built)", desc: "เราวิเคราะห์ปัญหาเฉพาะหน้าของแต่ละองค์กร และออกแบบระบบเพื่อให้ตอบโจทย์วัฒนธรรมและเป้าหมายขององค์กรคุณที่สุด" },
+                    { title: "การวัดผลลัพธ์ที่เป็นรูปธรรม", desc: "ทุกโครงการที่เราทำต้องมีตัวชี้วัดความสำเร็จที่ชัดเจน ไม่ว่าจะเป็นรายได้ที่เพิ่มขึ้น ต้นทุนที่ลดลง หรือประสิทธิภาพที่สูงขึ้น" },
+                ]
+            },
+            cta: {
+                title: "พร้อมยกระดับองค์กรของคุณสู่ระดับถัดไปหรือยัง?",
+                subtitle: "พูดคุยกับที่ปรึกษาของเราเพื่อวิเคราะห์จุดแข็งและโอกาสในการเติบโตขององค์กรคุณวันนี้",
+                btn: "ปรึกษาผู้เชี่ยวชาญเชิงกลยุทธ์",
+            }
+        },
     },
     en: {
         nav: {
@@ -428,34 +509,42 @@ export const dictionaries = {
                 "Digital HR Transformation": {
                     title: "Digital HR Transformation",
                     desc: "Organization design and planning for Digital Transformation",
+                    fullDesc: "Modernize your complete HR landscape with cutting-edge technology — from auditing existing workflows and creating digital roadmaps to implementing bespoke payroll, recruitment, and appraisal systems. We automate repetitive tasks, enabling your HR team to focus on strategic initiatives that drive real business value.",
                 },
                 "HR Consulting": {
                     title: "HR Consulting",
                     desc: "Monthly HR consulting for SMEs",
+                    fullDesc: "Our expert consulting team, with over 15 years of HR leadership, serves as your dedicated monthly partner. We cover labor compliance, policy design, performance management frameworks (KPIs/OKRs), and pay structures — empowering SMEs with high-level HR expertise at more than 50% cost savings compared to full-time hires.",
                 },
                 "Recruitment Services": {
                     title: "Recruitment Services",
                     desc: "Recruitment services for all levels",
+                    fullDesc: "Source and secure top-tier talent across all seniority levels. Our multi-channel sourcing strategy leverages job boards, LinkedIn, and exclusive professional networks for executive headhunting. Each candidate undergoes rigorous competency-based screening and skill assessment, providing you with data-backed reports for confident hiring decisions.",
                 },
                 "Organization Development": {
                     title: "Organization Development",
                     desc: "Organization structure design and Organization Chart",
+                    fullDesc: "Align your organizational structure with your strategic vision. We provide deep analysis and redesign services, including Organization Charts, Job Descriptions, Career Pathing, Competency Frameworks, and Performance Management systems to eliminate redundancy and maximize operational efficiency across all departments.",
                 },
                 "HR Systems & Apps": {
                     title: "HR Systems & Apps",
                     desc: "Corporate Web App and Application Development",
+                    fullDesc: "Build custom HR software tailored to your specific organizational workflows. Our development expertise covers online recruitment portals, payroll engines (with local tax compliance), e-Leave systems, AI-powered internal chatbots, and executive oversight dashboards — delivered as high-performance web and mobile applications.",
                 },
                 "Resume/CV Writing": {
                     title: "Resume/CV Writing",
                     desc: "Resume/CV/Portfolio writing (Thai, English, Chinese, Japanese)",
+                    fullDesc: "Stand out in the competitive job market with professional Resume, CV, and Portfolio design in multiple languages (Thai, English, Chinese, Japanese). Our HR experts craft ATS-friendly content that highlights your unique strengths and achievements, significantly increasing your invitation rate for dream roles.",
                 },
                 "Website Development": {
                     title: "Website Development",
                     desc: "Business Website Design or HR Corporate Branding",
+                    fullDesc: "Establish a powerful digital presence with high-performance, responsive websites. We specialize in corporate sites, HR portals, and CSR/Sustainability platforms designed for speed and professional aesthetics. Full On-Page SEO is integrated from day one to ensure maximum visibility on Google search results.",
                 },
                 "Training Solutions": {
                     title: "Training Solutions",
                     desc: "E-learning system setup and Training Management",
+                    fullDesc: "Deploy end-to-end learning ecosystems, from training needs analysis and roadmap design to scenario-based e-Learning courses and simulation games. We provide integrated training record systems and analytics to ensure measurable knowledge retention and real-world skill application.",
                 },
             },
             viewAll: "View All",
@@ -790,6 +879,87 @@ export const dictionaries = {
                     a: "Our key strength is combining over 15 years of HR expertise with technology and software development capabilities. This allows us to design more comprehensive solutions covering Strategy, Process, and Tech Platform in one place — we don't just advise, we execute."
                 }
             ]
+        },
+        about: {
+            hero: {
+                title: "Strategic HR and AI Partner for Sustainable Organizational Growth",
+                description: "We specialize in driving organizational success by integrating human potential with modern technology, creating a professional competitive advantage in the digital age.",
+            },
+            whoWeAre: {
+                title: "Who We Are",
+                p1: "Phichaya HR Solutions was founded with a commitment to be a premier HR Consulting partner in Thailand that meets the challenges of the modern business world. We serve as a strategic partner, helping build a sustainable foundation for people management and operational systems.",
+                p2: "With deep expertise in AI Recruitment and HR Digital Transformation, we believe business growth starts with efficient management systems and technology that empowers your workforce.",
+                stats: [
+                    { value: "15+ Years", label: "Consulting Experience" },
+                    { value: "Custom", label: "Personalized Services" },
+                    { value: "Reasonable", label: "Fair Pricing" },
+                ]
+            },
+            visionMission: {
+                visionTitle: "Vision",
+                visionDesc: "To be a leader in comprehensive human resource consulting and HR innovation, driving organizational success through people and technology on an international scale.",
+                missionTitle: "Mission",
+                missionDesc: "To deliver solutions that create Tangible Results through professional design processes, empowering people, transforming organizations, and fostering stable growth alongside our clients.",
+            },
+            pptModel: {
+                title: "Our Strategic Framework: PPT Model",
+                subtitle: "The key to Organizational Transformation is the balance and synergy of three core elements.",
+                peopleTitle: "P – People",
+                peopleItems: [
+                    "Proactive HR Management Strategies",
+                    "Leadership Development",
+                    "Performance Management",
+                    "Organizational Culture Building"
+                ],
+                processTitle: "P – Process",
+                processItems: [
+                    "Organization & HR System Design",
+                    "Recruitment Process Optimization",
+                    "HR Workflow & Policy Design",
+                    "PDPA & Compliance for HR"
+                ],
+                techTitle: "T – Technology",
+                techItems: [
+                    "AI Recruitment Technology",
+                    "Digital HR Platforms & Mobile Apps",
+                    "HR Analytics & Data Dashboards",
+                    "Automation & Data-Driven HR"
+                ],
+                footer: "We integrate these three elements to drive your organization faster, with greater precision, and with a clear direction for long-term growth."
+            },
+            differentiation: {
+                title: "What Makes Us Different",
+                subtitle: "Partnership isn't just about finishing the job; it's about creating superior value through systematic thinking.",
+                items: [
+                    { title: "Strategic Thinking", desc: "We look beyond short-term fixes to your long-term business objectives." },
+                    { title: "Data-Driven Approach", desc: "Using data and analytics for accurate and fair decision-making." },
+                    { title: "Customized HR Architecture", desc: "Designing systems that fit your needs exactly, not just one-size-fits-all solutions." },
+                    { title: "Long-Term Partnership Mindset", desc: "Standing by our clients as one team for maximum project benefit." },
+                ]
+            },
+            coreValues: {
+                title: "Our Core Values",
+                items: [
+                    { title: "Strategic Professionalism", desc: "Delivering work with the highest professionalism under a clear strategic framework." },
+                    { title: "Data-Driven Innovation", desc: "Driving innovation with analytical data for maximum effectiveness." },
+                    { title: "Integrity & Trust", desc: "Maintaining accuracy, transparency, and building trust as a loyal partner." },
+                    { title: "Human-Centered Impact", desc: "Focusing on creating a positive impact on individual identities and quality of life within the organization." },
+                    { title: "Continuous Transformation", desc: "Committed to developing and adapting ourselves to stay ahead of technological changes." },
+                ]
+            },
+            whyUs: {
+                title: "Why Leading Organizations Choose Us",
+                items: [
+                    { title: "Comprehensive Specialized Expertise", desc: "We understand both HR science and technology engineering, making our solutions seamless and practical." },
+                    { title: "Custom-Built Solutions", desc: "We analyze the specific challenges of each organization and design systems that best fit your culture and goals." },
+                    { title: "Measurable Results", desc: "Every project we undertake has clear success indicators, whether increased revenue, reduced costs, or higher efficiency." },
+                ]
+            },
+            cta: {
+                title: "Ready to Take Your Organization to the Next Level?",
+                subtitle: "Talk to our consultants today to analyze your organization's strengths and growth opportunities.",
+                btn: "Consult a Strategic Expert",
+            }
         },
     },
 };
