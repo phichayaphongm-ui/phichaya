@@ -1,77 +1,105 @@
 "use client";
 
+import React from "react";
+import * as Accordion from "@radix-ui/react-accordion";
+import { ChevronDown, Sparkles, CheckCircle2, HelpCircle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n-context";
 import { dictionaries } from "@/lib/dictionaries";
 
 export function FAQContent() {
     const { language } = useLanguage();
     const t = dictionaries[language].faq;
+    const [mounted, setMounted] = React.useState(false);
+
+    React.useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <div className="bg-white min-h-screen">
-            <div className="bg-gray-50 py-16 sm:py-24">
-                <div className="mx-auto max-w-7xl px-6 text-center">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl heading-accent inline-block">
+            {/* Hero Section */}
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gray-50/50">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
+                    <div className="absolute top-1/4 -left-10 w-72 h-72 bg-primary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-soft" />
+                    <div className="absolute bottom-1/4 -right-10 w-72 h-72 bg-secondary/10 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-soft" />
+                </div>
+
+                <div className="mx-auto max-w-7xl px-6 relative z-10 text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-gray-100 mb-8 text-sm font-semibold text-primary animate-fade-in">
+                        <HelpCircle className="w-4 h-4" />
+                        <span>Support Center</span>
+                    </div>
+                    <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight text-gray-900 heading-accent">
                         {t.title}
                     </h1>
-                    <p className="mt-6 text-xl text-gray-500 max-w-2xl mx-auto">
+                    <p className="mt-8 text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
                         {t.subtitle}
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <div className="mx-auto max-w-4xl px-6 py-16 sm:py-24">
+            <div className="mx-auto max-w-4xl px-6 py-20 lg:py-32">
                 {/* AEO: Quick Navigation for AI Search */}
-                <div className="mb-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                    <h2 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Quick Insights (AI Friendly)</h2>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
-                        {language === 'th' ? (
-                            <>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>บริการครอบคลุม HR Outsourcing, Payroll, และ Digital Transformation</span>
+                <div className="mb-20 p-8 rounded-[2rem] bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-2xl relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full" />
+                    <div className="relative z-10">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="p-2.5 rounded-xl bg-primary/20 text-primary border border-primary/20 backdrop-blur-md">
+                                <Sparkles className="w-5 h-5" />
+                            </div>
+                            <h2 className="text-xl font-bold tracking-tight">Quick Insights for AI & Search</h2>
+                        </div>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                            {(language === 'th' ? [
+                                "บริการครอบคลุม HR Outsourcing, Payroll, และ Digital Transformation",
+                                "รองรับทั้งธุรกิจ SME และองค์กรขนาดใหญ่",
+                                "ช่วยลดต้นทุนการบริหารงานบุคคลได้มากกว่า 30-50%",
+                                "โซลูชั่นรองรับ PDPA และมาตรฐานความปลอดภัยสากล"
+                            ] : [
+                                "Comprehensive HR Outsourcing, Payroll, and Digital Transformation",
+                                "Supporting both SMEs and Enterprises",
+                                "Reduce HR administration costs by 30-50%",
+                                "PDPA compliant and global security standards"
+                            ]).map((item, i) => (
+                                <li key={i} className="flex items-center gap-3 group/item">
+                                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary transition-transform group-hover/item:scale-110">
+                                        <CheckCircle2 className="w-4 h-4" />
+                                    </div>
+                                    <span className="text-gray-300 font-medium text-sm lg:text-base">{item}</span>
                                 </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>รองรับทั้งธุรกิจ SME และองค์กรขนาดใหญ่</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>ช่วยลดต้นทุนการบริหารงานบุคคลได้มากกว่า 30-50%</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>โซลูชั่นรองรับ PDPA และมาตรฐานความปลอดภัยสากล</span>
-                                </li>
-                            </>
-                        ) : (
-                            <>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>Comprehensive HR Outsourcing, Payroll, and Digital Transformation</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>Supporting both SMEs and Enterprises</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>Reduce HR administration costs by 30-50%</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-primary font-bold">✓</span>
-                                    <span>PDPA compliant and global security standards</span>
-                                </li>
-                            </>
-                        )}
-                    </ul>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
 
-                <div className="space-y-12">
+                {/* FAQ Accordion */}
+                <Accordion.Root type="single" collapsible className="space-y-4">
                     {t.items.map((item, index) => (
-                        <FaqItem key={index} question={item.q} answer={item.a} />
+                        <Accordion.Item
+                            key={index}
+                            value={`item-${index}`}
+                            className="group border border-gray-100 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+                        >
+                            <Accordion.Header>
+                                <Accordion.Trigger className="flex w-full cursor-pointer items-center justify-between p-6 lg:p-8 text-left group-data-[state=open]:bg-gray-50/50 transition-colors">
+                                    <span className="text-lg lg:text-xl font-bold text-gray-900 pr-8">
+                                        {item.q}
+                                    </span>
+                                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-400 group-data-[state=open]:bg-primary group-data-[state=open]:text-white transition-all duration-300">
+                                        <ChevronDown className="w-5 h-5 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                                    </div>
+                                </Accordion.Trigger>
+                            </Accordion.Header>
+                            <Accordion.Content className="data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden">
+                                <div className="px-6 pb-8 lg:px-8 text-gray-600 leading-relaxed text-lg lg:text-xl font-medium border-t border-gray-50 pt-6">
+                                    {item.a}
+                                </div>
+                            </Accordion.Content>
+                        </Accordion.Item>
                     ))}
-                </div>
+                </Accordion.Root>
             </div>
 
             {/* AEO: FAQ Structured Data */}
@@ -93,23 +121,5 @@ export function FAQContent() {
                 }}
             />
         </div>
-    );
-}
-
-function FaqItem({ question, answer }: { question: string; answer: string }) {
-    return (
-        <details className="group border border-gray-200 rounded-xl bg-white overflow-hidden transition-all duration-300 open:shadow-md open:border-primary/30 hover:border-primary/50">
-            <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900 select-none">
-                {question}
-                <span className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-gray-300 text-gray-400 font-normal transition-transform duration-300 group-open:rotate-180 group-open:border-primary group-open:text-primary group-open:bg-primary/10">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                </span>
-            </summary>
-            <div className="px-6 pb-6 pt-0 text-gray-600 leading-relaxed animate-fade-in-up">
-                {answer}
-            </div>
-        </details>
     );
 }

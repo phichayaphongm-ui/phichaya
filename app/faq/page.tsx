@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { StructuredData } from "@/components/structured-data";
 import { FAQContent } from "./faq-content";
+import { Navigation } from "@/components/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title: "คำถามที่พบบ่อย (FAQ) | Phichaya HR Solutions",
@@ -31,15 +34,18 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "/faq",
+        canonical: "https://phichaya.com/faq",
     },
 };
 
 export default function FAQPage() {
     return (
-        <>
+        <main>
             <StructuredData type="organization" page="faq" />
+            <Navigation />
             <FAQContent />
-        </>
+            <SiteFooter />
+            <BackToTop />
+        </main>
     );
 }
