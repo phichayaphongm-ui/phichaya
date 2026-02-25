@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
-    title: "นโยบายความเป็นส่วนตัว (Privacy Policy) | Phichaya HR Solutions",
+    title: "นโยบายความเป็นส่วนตัว (Privacy Policy)",
     description:
         "นโยบายการคุ้มครองข้อมูลส่วนบุคคลของ Phichaya HR Solutions อธิบายถึงวิธีการเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของคุณตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA)",
     alternates: {

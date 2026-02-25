@@ -7,7 +7,7 @@ import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title:
-        "Recruitment Solution | ตัวอย่างผลงาน | Phichaya HR Solutions",
+        "Recruitment Solution | ตัวอย่างผลงาน",
     description:
         "ระบบสรรหาพนักงานยุคดิจิทัล (Digital Recruitment) ช่วยให้การสมัครงานง่าย รวดเร็ว และมีประสิทธิภาพ พร้อมระบบคัดกรองและรายงานผลแบบ Real-time",
     keywords:

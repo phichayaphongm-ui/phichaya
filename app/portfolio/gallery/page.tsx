@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
-    title: "ตัวอย่างผลงานเว็บไซต์ | พาธุรกิจคุณออกสู่โลกกว้าง | Phichaya HR Solutions",
+    title: "ตัวอย่างผลงานเว็บไซต์",
     description:
         "รวมตัวอย่างผลงานเว็บไซต์และโซลูชั่นที่เราออกแบบ พาธุรกิจคุณออกสู่โลกกว้างด้วยเว็บไซต์ระดับมืออาชีพ",
     keywords:

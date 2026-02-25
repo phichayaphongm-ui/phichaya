@@ -21,8 +21,12 @@ export async function generateMetadata(
         };
     }
 
+    const brandSuffix = " | Phichaya HR Solutions";
+    const baseTitle = post.title.th;
+    const fullTitle = `${baseTitle}${brandSuffix}`;
+
     return {
-        title: `${post.title.th} | Phichaya HR Blog`,
+        title: fullTitle.length > 70 ? { absolute: baseTitle } : baseTitle,
         description: post.excerpt.th,
         openGraph: {
             title: post.title.th,

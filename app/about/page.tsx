@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
-    title: "เกี่ยวกับเรา (About Us) | Phichaya HR Solutions",
+    title: "เกี่ยวกับเรา (About Us)",
     description:
         "Phichaya HR Solutions | พันธมิตรเชิงกลยุทธ์ด้าน HR และ AI เพื่อการเติบโตอย่างยั่งยืนขององค์กร เชี่ยวชาญด้าน HR Consulting, AI Recruitment และ Digital HR Transformation ด้วยประสบการณ์กว่า 15 ปี",
     keywords:

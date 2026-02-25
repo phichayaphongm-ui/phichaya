@@ -7,7 +7,7 @@ import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
     title:
-        "Service Mind Training Game | ตัวอย่างผลงาน | Phichaya HR Solutions",
+        "Service Mind Simulation Game | ตัวอย่างผลงาน",
     description:
         "เกมฝึกอบรมแบบจำลองสถานการณ์ (Scenario-based Training) สำหรับ e-learning ช่วยให้พนักงานเรียนรู้ผ่านสถานการณ์จริงในรูปแบบเกม สนุก เข้าใจง่าย และมีส่วนร่วมสูง",
     keywords:

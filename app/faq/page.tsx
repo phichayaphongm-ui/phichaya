@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
-    title: "คำถามที่พบบ่อย (FAQ) | Phichaya HR Solutions",
+    title: "คำถามที่พบบ่อย (FAQ)",
     description:
         "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ ของ Phichaya HR Solutions คำตอบชัดเจนเพื่อช่วยคุณตัดสินใจ",
     keywords: "FAQ, คำถามที่พบบ่อย, HR Outsourcing, PDPA, Digital Transformation, Phichaya HR",
