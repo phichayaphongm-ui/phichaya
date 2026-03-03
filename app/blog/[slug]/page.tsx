@@ -49,6 +49,9 @@ export async function generateMetadata(
             description: post.excerpt.th,
             images: [post.image],
         },
+        alternates: {
+            canonical: `https://phichaya.com/blog/${slug}`,
+        },
     };
 }
 

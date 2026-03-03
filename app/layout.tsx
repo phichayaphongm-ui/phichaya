@@ -44,13 +44,6 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  alternates: {
-    canonical: "https://phichaya.com",
-    languages: {
-      "th-TH": "https://phichaya.com",
-      "en-US": "https://phichaya.com",
-    },
-  },
   robots: {
     index: true,
     follow: true,
