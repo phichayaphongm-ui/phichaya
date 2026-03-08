@@ -11,6 +11,184 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+    // --- 0. HR Software Zero Paper (NEW - SEO Optimized) ---
+    {
+        slug: "hr-software-zero-paper",
+        date: "2026-03-08",
+        author: "Phichaya Team",
+        category: "Technology",
+        image: "/images/blog/hr-software-zero-paper.jpg",
+        title: {
+            th: "PHR-One โปรแกรม HR ครบวงจร: Zero Paper จัดการงาน HR ครบ จบใน App เดียว",
+            en: "PHR-One All-in-One HR Software: Zero Paper — Complete HR Management in a Single App"
+        },
+        excerpt: {
+            th: "ทำไมองค์กรยุคใหม่ต้องเปลี่ยนมาใช้โปรแกรม HR แบบ Zero Paper? รู้จัก 'PHR-One' โปรแกรมที่ตอบโจทย์ทุกฟังก์ชัน HR ตั้งแต่สรรหา เงินเดือน ถึง PDPA",
+            en: "Why modern organizations must switch to Zero Paper HR software? Meet 'PHR-One', the all-in-one app for recruitment, payroll, to PDPA compliance."
+        },
+        tldr: {
+            th: "PHR-One คือโปรแกรม HR ครบวงจรแบบ Zero Paper ตอบโจทย์ทุกฟังก์ชัน HR ช่วยลดกระดาษ 100% ลดเวลางาน Admin 70% เหมาะสำหรับทุกองค์กร",
+            en: "PHR-One is an all-in-one Zero Paper HR software that answers all HR needs, reducing paper by 100% and admin time by 70%, ideal for all organizations."
+        },
+        content: {
+            th: `
+## ยุคของ Zero Paper HR มาถึงแล้ว
+
+ในปี 2026 องค์กรที่ยังใช้กระดาษและ Excel ในการจัดการงาน HR กำลังเสียเปรียบอย่างมหาศาล ไม่ว่าจะเป็นเรื่องความเร็วในการทำงาน ความถูกต้องของข้อมูล หรือความเสี่ยงด้าน PDPA การเปลี่ยนมาใช้โปรแกรม HR ครบวงจรแบบ Zero Paper อย่าง **PHR-One** คือคำตอบที่ช่วยให้ทุกอย่างจบในแอปเดียว
+
+### Zero Paper คืออะไร?
+
+Zero Paper คือแนวคิดการทำงานที่ **ลดการใช้กระดาษเหลือ 0%** โดยเปลี่ยนทุกกระบวนการ HR ให้เป็นระบบดิจิทัลทั้งหมด ด้วย **PHR-One** คุณสามารถทำ:
+- 📄 **สัญญาจ้างอิเล็กทรอนิกส์** (e-Contract) — ลงนามดิจิทัลได้ทันที
+- 💰 **สลิปเงินเดือนออนไลน์** (e-Payslip) — พนักงานดูผ่านแอปได้ทุกที่
+- ✈️ **ระบบลาออนไลน์** (e-Leave) — ลาง่าย อนุมัติไว ไม่ต้องพิมพ์ฟอร์ม
+- 📊 **ประเมินผลงานออนไลน์** (e-Performance) — ประเมิน 360 องศาผ่านระบบ
+- 📁 **จัดเก็บเอกสารดิจิทัล** (e-Document) — ค้นหาเอกสารพนักงานได้ในวินาที
+
+### PHR-One: ตอบโจทย์ทุกฟังก์ชัน HR ในแอปเดียว
+
+โปรแกรม **PHR-One** มีฟีเจอร์ครบวงจรที่รองรับงาน HR ทุกด้าน ไม่ต้องใช้หลายระบบให้ยุ่งยาก:
+
+#### 1. 🎯 สรรหาและคัดเลือก (Recruitment & ATS)
+- ลงประกาศตำแหน่งงาน → รับใบสมัครออนไลน์ → คัดกรองอัตโนมัติ → นัดสัมภาษณ์
+- ติดตามสถานะผู้สมัคร (Applicant Tracking) ได้แบบ Real-time
+- ส่ง Offer Letter ดิจิทัลได้ทันทีหลังตัดสินใจ
+
+#### 2. 💵 เงินเดือนและสวัสดิการ (Payroll & Benefits)
+- คำนวณเงินเดือน ภาษี ประกันสังคม กบข. อัตโนมัติ
+- สร้าง e-Payslip และ ภ.ง.ด. ได้ในคลิกเดียว
+- รองรับ OT, ค่ากะ, คอมมิชชั่น และเบี้ยเลี้ยง
+
+#### 3. ⏰ เวลาเข้า-ออกงาน (Time & Attendance)
+- Check-in/Check-out ผ่านแอป GPS หรือ Face Recognition
+- เชื่อมกับเครื่องสแกนนิ้ว/ใบหน้าที่มีอยู่แล้ว
+- คำนวณ OT และค่ากะอัตโนมัติ
+
+#### 4. 📋 ประเมินผลงาน (Performance Management)
+- ตั้ง OKRs / KPIs ให้พนักงานผ่านระบบ
+- ประเมิน 360 องศา หัวหน้า → เพื่อนร่วมงาน → ตัวเอง
+- Dashboard แสดงผลงานรายบุคคลและรายทีม
+
+#### 5. 🎓 ฝึกอบรม (Training & Development)
+- จัดคอร์สอบรมออนไลน์ (e-Learning) ในระบบ
+- ติดตามชั่วโมงอบรมและใบรับรอง (Certificate)
+- วิเคราะห์ Skill Gap และวางแผนพัฒนาบุคลากร
+
+#### 6. 🔒 PDPA Compliance
+- ระบบยินยอม (Consent) ดิจิทัลครบถ้วน
+- จำกัดสิทธิ์เข้าถึงข้อมูลตามบทบาท (Role-based Access)
+- Log การเข้าถึงข้อมูลทุกรายการ (Audit Trail)
+- กำหนดระยะเวลาเก็บรักษาและทำลายข้อมูลอัตโนมัติ
+
+### ทำไมต้องเลือก PHR-One?
+
+| ปัญหาแบบเดิม | แก้ไขด้วย PHR-One All-in-One |
+|---|---|
+| ใช้ Excel คำนวณเงินเดือน | Payroll อัตโนมัติ ลดผิดพลาด 100% |
+| ฟอร์มลากระดาษสูญหาย | e-Leave มีบันทึกตลอด ผ่านมือถือ |
+| ข้อมูลกระจายหลายที่ | ฐานข้อมูลกลางที่เดียวเชื่อมต่อกัน |
+| เสียเวลาทำรายงาน | Dashboard Real-time สำหรับผู้บริหาร |
+| เสี่ยง PDPA | ระบบ Consent + Audit Trail ควบคุมสิทธิ์ |
+
+### ROI ที่วัดผลได้จาก PHR-One
+
+องค์กรที่เปลี่ยนมาใช้ **PHR-One** โปรแกรม HR ครบวงจรแบบ Zero Paper พบว่า:
+- ⬇️ **ลดเวลางาน Admin ได้ 70%** — HR มีเวลาไปโฟกัสงานเชิงกลยุทธ์
+- ⬇️ **ลดต้นทุนกระดาษและพิมพ์ 100%** — ไม่ต้องซื้อกระดาษ หมึก หรือตู้เก็บเอกสาร
+- ⬆️ **ความแม่นยำเพิ่มขึ้น 95%** — ลดข้อผิดพลาดจากการ Key ข้อมูลซ้ำ
+- ⬆️ **Employee Satisfaction เพิ่มขึ้น** — พนักงานทำธุรกรรม HR ได้เองผ่านแอป
+
+### เริ่มต้นใช้งาน PHR-One อย่างไร?
+
+1. **ประเมินสถานะปัจจุบัน** — วิเคราะห์ว่ากระบวนการไหนยังใช้กระดาษอยู่
+2. **ปรึกษาทีมผู้เชี่ยวชาญ** — ให้ทีมงาน PHR-One แนะนำแพ็กเกจที่เหมาะสม
+3. **Pilot Project** — เริ่มติดตั้งระบบหลัก เช่น e-Leave + e-Payslip
+4. **Roll Out & Training** — แจกจ่ายแอปพลิเคชันให้พนักงานพร้อมอบรมการใชังาน
+
+**PHR-One** พัฒนาโดย **Phichaya HR Solutions** ผู้เชี่ยวชาญด้านการวางระบบ HR ดิจิทัลครบวงจร ด้วยประสบการณ์กว่า 15 ปีในวงการ HR Technology เราพร้อมให้คำปรึกษาและดูแลคุณอย่างใกล้ชิด
+
+> 📞 สนใจทดลองใช้ PHR-One ปรึกษาฟรี! โทร 082-646-5526 หรือ [ติดต่อเรา](https://phichaya.com/#contact)
+      `,
+            en: `
+## The Era of Zero Paper HR Has Arrived
+
+In 2026, organizations still using paper and Excel for HR management are at a massive disadvantage — in speed, data accuracy, and PDPA compliance risk. Switching to an **all-in-one HR software** with a **Zero Paper** approach is the answer that brings everything into a single app.
+
+### What is Zero Paper?
+
+Zero Paper is a work philosophy that **reduces paper usage to 0%** by digitizing every HR process:
+- 📄 **Electronic Contracts** (e-Contract) — instant digital signatures
+- 💰 **Online Payslips** (e-Payslip) — employees view from anywhere via app
+- ✈️ **Online Leave** (e-Leave) — easy to request, fast to approve
+- 📊 **Online Performance Reviews** (e-Performance) — 360-degree evaluations
+- 📁 **Digital Document Storage** (e-Document) — find employee documents in seconds
+
+### Essential All-in-One Features
+
+A great HR software must cover every area without needing multiple systems:
+
+#### 1. 🎯 Recruitment & ATS
+- Post jobs → Receive online applications → Auto-screen → Schedule interviews
+- Real-time Applicant Tracking
+- Send digital Offer Letters instantly
+
+#### 2. 💵 Payroll & Benefits
+- Auto-calculate salary, tax, social security
+- Generate e-Payslips and tax forms in one click
+- Support OT, shift pay, commissions, and allowances
+
+#### 3. ⏰ Time & Attendance
+- Check-in/out via GPS app or Face Recognition
+- Integrate with existing fingerprint/face scanners
+- Auto-calculate OT and shift premiums
+
+#### 4. 📋 Performance Management
+- Set OKRs/KPIs through the system
+- 360-degree evaluation: manager → peers → self
+- Individual and team performance dashboards
+
+#### 5. 🎓 Training & Development
+- Online courses (e-Learning) within the system
+- Track training hours and certificates
+- Skill gap analysis and development planning
+
+#### 6. 🔒 PDPA Compliance
+- Complete digital consent system
+- Role-based access control
+- Full audit trail for data access
+- Automated data retention and destruction schedules
+
+### Why choose PHR-One?
+
+| Old Way | PHR-One All-in-One Solution |
+|---|---|
+| Excel payroll | Automated, error-free payroll |
+| Paper leave forms get lost | e-Leave with permanent mobile records |
+| Data scattered across systems | Single centralized integrated database |
+| Time-consuming reports | Real-time executive dashboards |
+| PDPA risk | Consent + Audit Trail access control |
+
+### Measurable ROI with PHR-One
+
+Organizations switching to **PHR-One** Zero Paper all-in-one HR software report:
+- ⬇️ **70% reduction in admin time** — HR can focus on strategy
+- ⬇️ **100% paper and printing cost elimination**
+- ⬆️ **95% improvement in data accuracy**
+- ⬆️ **Higher employee satisfaction** — self-service HR via app
+
+### How to Get Started with PHR-One?
+
+1. **Assess current state** — Identify which processes still use paper
+2. **Consult Experts** — Let the PHR-One team recommend the right package
+3. **Pilot Project** — Start with core systems like e-Leave + e-Payslip
+4. **Roll Out & Training** — Distribute the app organization-wide with proper training
+
+**PHR-One** is developed by **Phichaya HR Solutions**, experts in complete digital HR system implementation. With over 15 years of HR Technology experience, we are ready to consult and support you closely.
+
+> 📞 Interested in PHR-One? Free consultation! Call 082-646-5526 or [Contact us](https://phichaya.com/#contact)
+      `
+        }
+    },
     // --- 1. Generative AI (Expanded) ---
     {
         slug: "generative-ai-hr-2026",

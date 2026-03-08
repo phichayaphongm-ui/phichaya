@@ -11,6 +11,10 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://phichaya.com/blog",
     },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function BlogListPage() {

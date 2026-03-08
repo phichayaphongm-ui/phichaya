@@ -18,6 +18,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://phichaya.com"),
+  alternates: {
+    canonical: "https://phichaya.com",
+  },
   title: {
     default: "Phichaya HR Solutions | HR Digital Transformation Expert",
     template: "%s | Phichaya HR Solutions"
@@ -97,11 +100,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th">
+    <html lang="th" suppressHydrationWarning>
       <head>
         <StructuredData type="organization" page="home" />
       </head>
-      <body className={`${kanit.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${kanit.variable} ${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <I18nProvider>
           {children}
         </I18nProvider>

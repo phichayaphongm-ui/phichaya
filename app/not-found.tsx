@@ -11,6 +11,9 @@ export default function NotFound() {
         <main>
             <Navigation />
             <div className="flex min-h-[80vh] flex-col items-center justify-center bg-white px-6 text-center relative overflow-hidden">
+                <head>
+                    <meta name="robots" content="noindex, nofollow" />
+                </head>
                 {/* Decorative Blobs */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10 animate-pulse-soft" />
                 <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-purple-50 rounded-full blur-3xl opacity-50 -z-10 animate-blob" />

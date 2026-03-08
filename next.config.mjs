@@ -15,7 +15,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
             key: 'Content-Security-Policy',
@@ -34,6 +34,7 @@ const nextConfig = {
             key: 'X-Robots-Tag',
             value: 'noindex, nofollow',
           },
+
         ],
       },
     ]

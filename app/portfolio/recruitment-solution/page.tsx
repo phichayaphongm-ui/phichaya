@@ -38,6 +38,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://phichaya.com/portfolio/recruitment-solution",
     },
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: "Recruitment Solution | ตัวอย่างผลงาน",
+        description: "ระบบสรรหาพนักงานยุคดิจิทัล (Digital Recruitment) ช่วยให้การสมัครงานง่าย รวดเร็ว และมีประสิทธิภาพ พร้อมระบบคัดกรองและรายงานผลแบบ Real-time",
+        url: "https://phichaya.com/portfolio/recruitment-solution",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Recruitment Solution | ตัวอย่างผลงาน",
+        description: "ระบบสรรหาพนักงานยุคดิจิทัล (Digital Recruitment) ช่วยให้การสมัครงานง่าย รวดเร็ว และมีประสิทธิภาพ พร้อมระบบคัดกรองและรายงานผลแบบ Real-time",
+    },
 };
 
 export default function RecruitmentSolutionPage() {

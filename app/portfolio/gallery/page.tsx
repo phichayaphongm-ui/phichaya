@@ -37,6 +37,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://phichaya.com/portfolio/gallery",
     },
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: "ตัวอย่างผลงานเว็บไซต์",
+        description: "รวมตัวอย่างผลงานเว็บไซต์และโซลูชั่นที่เราออกแบบ พาธุรกิจคุณออกสู่โลกกว้างด้วยเว็บไซต์ระดับมืออาชีพ",
+        url: "https://phichaya.com/portfolio/gallery",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "ตัวอย่างผลงานเว็บไซต์",
+        description: "รวมตัวอย่างผลงานเว็บไซต์และโซลูชั่นที่เราออกแบบ พาธุรกิจคุณออกสู่โลกกว้างด้วยเว็บไซต์ระดับมืออาชีพ",
+    },
 };
 
 export default function GalleryPage() {

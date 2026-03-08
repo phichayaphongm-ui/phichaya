@@ -9,17 +9,18 @@ export const metadata: Metadata = {
     title: "คำถามที่พบบ่อย (FAQ)",
     description:
         "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ ของ Phichaya HR Solutions คำตอบชัดเจนเพื่อช่วยคุณตัดสินใจ",
-    keywords: "FAQ, คำถามที่พบบ่อย, HR Outsourcing, PDPA, Digital Transformation, Phichaya HR",
+    keywords: "FAQ, คำถามที่พบบ่อย, HR Outsourcing, PDPA, Digital Transformation, Phichaya HR, #โปรแกรม HR ครบวงจร, #โปรแกรมเงินเดือน, PHR-One",
     openGraph: {
         title: "คำถามที่พบบ่อย (FAQ) | Phichaya HR Solutions",
-        description: "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ",
+        description: "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ ของ Phichaya HR Solutions",
+        url: "https://phichaya.com/faq",
         images: ["/logo.png"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "คำถามที่พบบ่อย (FAQ) | Phichaya HR Solutions",
-        description: "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ",
+        description: "รวมคำถามที่พบบ่อยเกี่ยวกับ HR Outsourcing, HR Software, Digital Transformation, PDPA และบริการอื่นๆ ของ Phichaya HR Solutions",
         images: ["/logo.png"],
     },
     robots: {

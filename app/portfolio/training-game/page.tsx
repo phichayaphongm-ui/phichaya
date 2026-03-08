@@ -38,6 +38,21 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://phichaya.com/portfolio/training-game",
     },
+    robots: {
+        index: true,
+        follow: true,
+    },
+    openGraph: {
+        title: "Service Mind Simulation Game | ตัวอย่างผลงาน",
+        description: "เกมฝึกอบรมแบบจำลองสถานการณ์ (Scenario-based Training) สำหรับ e-learning ช่วยให้พนักงานเรียนรู้ผ่านสถานการณ์จริงในรูปแบบเกม สนุก เข้าใจง่าย และมีส่วนร่วมสูง",
+        url: "https://phichaya.com/portfolio/training-game",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Service Mind Simulation Game | ตัวอย่างผลงาน",
+        description: "เกมฝึกอบรมแบบจำลองสถานการณ์ (Scenario-based Training) สำหรับ e-learning ช่วยให้พนักงานเรียนรู้ผ่านสถานการณ์จริงในรูปแบบเกม",
+    },
 };
 
 export default function TrainingGamePage() {

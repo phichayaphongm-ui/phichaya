@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://phichaya.com/privacy-policy",
     },
+    keywords: "นโยบายความเป็นส่วนตัว, Privacy Policy, PDPA, #โปรแกรม HR ครบวงจร, #โปรแกรมเงินเดือน, PHR-One",
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
 export default function PrivacyPolicyPage() {

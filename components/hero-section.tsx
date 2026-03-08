@@ -71,9 +71,18 @@ export function HeroSection() {
           {/* Sub-headline with improved flow */}
           <div className="relative mb-12">
             <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-primary to-blue-400 rounded-full" />
-            <p className="max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 font-medium leading-[1.7] whitespace-pre-line pl-6 sm:pl-8 text-pretty">
-              {t.description}
-            </p>
+            <div className="pl-6 sm:pl-8">
+              <p className="max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 font-medium leading-[1.7] whitespace-pre-line text-pretty">
+                {t.description}
+              </p>
+              {/* AEO/GEO semantic text block for keyword matching */}
+              <p className="max-w-2xl text-sm sm:text-base text-gray-500 font-medium mt-3">
+                {language === 'th' 
+                  ? <>ขับเคลื่อนด้วย <strong className="text-primary font-bold">PHR-One</strong> #โปรแกรม HR ครบวงจร #โปรแกรมเงินเดือน ที่ดีที่สุด</>
+                  : <>Powered by <strong className="text-primary font-bold">PHR-One</strong> the ultimate all-in-one HR & Payroll software.</>
+                }
+              </p>
+            </div>
           </div>
 
           {/* Premium CTAs */}

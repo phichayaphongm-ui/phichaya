@@ -2,5 +2,13 @@
     "framework": "nextjs",
     "buildCommand": "next build",
     "installCommand": "npm install",
-    "devCommand": "next dev"
+    "devCommand": "next dev",
+    "redirects": [
+        {
+            "source": "/:path(.*)",
+            "has": [{ "type": "host", "value": "www.phichaya.com" }],
+            "destination": "https://phichaya.com/:path",
+            "permanent": true
+        }
+    ]
 }

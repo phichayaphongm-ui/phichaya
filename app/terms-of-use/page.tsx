@@ -4,11 +4,16 @@ import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
 export const metadata: Metadata = {
-    title: "ข้อตกลงในการใช้งาน (Terms of Use) | Phichaya HR Solutions",
+    title: "ข้อตกลงในการใช้งาน (Terms of Use)",
     description:
         "ข้อตกลงและเงื่อนไขการใช้งานเว็บไซต์ Phichaya HR Solutions โปรดอ่านข้อกำหนดเหล่านี้อย่างละเอียดก่อนใช้งานเว็บไซต์",
     alternates: {
         canonical: "https://phichaya.com/terms-of-use",
+    },
+    keywords: "ข้อตกลงในการใช้งาน, Terms of Use, เงื่อนไขการใช้งาน, #โปรแกรม HR ครบวงจร, #โปรแกรมเงินเดือน, PHR-One",
+    robots: {
+        index: true,
+        follow: true,
     },
 };
 

@@ -17,6 +17,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://phichaya.com",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords: [
+    "HR Solutions Thailand",
+    "#โปรแกรม HR ครบวงจร",
+    "#โปรแกรมเงินเดือน",
+    "PHR-One",
+    "ที่ปรึกษา HR มืออาชีพ"
+  ],
 };
 
 export default function Page() {
@@ -79,6 +90,31 @@ export default function Page() {
                 }
               }
             ]
+          }),
+        }}
+      />
+
+      {/* AEO/GEO: Software Application Structured Data for PHR-One */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "PHR-One",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "description": "โปรแกรม HR ครบวงจร Zero Paper บริหารจัดการทรัพยากรบุคคลครอบคลุมตั้งแต่สรรหา เงินเดือน พัฒนาบุคลากร และ PDPA ในแอปพลิเคชันเดียว",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "THB",
+              "availability": "https://schema.org/InStock"
+            },
+            "brand": {
+              "@type": "Organization",
+              "name": "Phichaya HR Solutions"
+            }
           }),
         }}
       />
