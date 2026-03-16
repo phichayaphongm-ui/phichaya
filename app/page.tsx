@@ -10,10 +10,12 @@ import { CtaBanner } from "@/components/cta-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
 
-import { Kanit } from "next/font/google";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Phichaya HR Solutions | ที่ปรึกษา HR และโปรแกรม HR ครบวงจรสำหรับองค์กรไทย",
+  description:
+    "Phichaya HR Solutions ผู้เชี่ยวชาญด้าน HR Digital Transformation กว่า 15 ปี ให้บริการที่ปรึกษา HR, HR Outsourcing และ PHR-One โปรแกรม HR ครบวงจรและโปรแกรมเงินเดือนสำหรับองค์กรไทย รองรับ PDPA และการทำงานแบบ Hybrid.",
   alternates: {
     canonical: "https://phichaya.com",
   },

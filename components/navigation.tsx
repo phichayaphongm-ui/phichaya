@@ -15,6 +15,7 @@ export function Navigation() {
 
   const navLinks = [
     { href: "/#home", label: t.home },
+    { href: "/phr-one", label: "PHR-One" },
     { href: "/#services", label: t.services },
     { href: "/#portfolio", label: t.portfolio },
     { href: "/blog", label: t.articles },

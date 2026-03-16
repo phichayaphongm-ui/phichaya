@@ -78,7 +78,7 @@ export function HeroSection() {
               {/* AEO/GEO semantic text block for keyword matching */}
               <p className="max-w-2xl text-sm sm:text-base text-gray-500 font-medium mt-3">
                 {language === 'th' 
-                  ? <>ขับเคลื่อนด้วย <strong className="text-primary font-bold">PHR-One</strong> #โปรแกรม HR ครบวงจร #โปรแกรมเงินเดือน ที่ดีที่สุด</>
+                  ? <>ขับเคลื่อนด้วย <strong className="text-primary font-bold">PHR-One</strong> #โปรแกรม HR ครบวงจร #โปรแกรมเงินเดือน ที่ครบถ้วนและแม่นยำ</>
                   : <>Powered by <strong className="text-primary font-bold">PHR-One</strong> the ultimate all-in-one HR & Payroll software.</>
                 }
               </p>
@@ -101,6 +101,17 @@ export function HeroSection() {
             >
               {t.primaryBtn}
               <div className="rounded-full bg-gray-100 p-1 group-hover:bg-primary/10 transition-colors">
+                <ArrowRight className="h-5 w-5" />
+              </div>
+            </a>
+            <a
+              href="/phr-one"
+              className="group inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-2xl border-2 border-primary/20 bg-white/70 backdrop-blur-xl px-8 py-4 text-base sm:text-lg font-bold text-primary transition-all hover:border-primary hover:bg-primary/5 hover:shadow-xl active:scale-95"
+            >
+              {language === "th"
+                ? "ดูรายละเอียดโปรแกรม PHR-One"
+                : "Explore PHR-One all-in-one HR"}
+              <div className="rounded-full bg-primary/5 p-1.5 group-hover:bg-primary/15 transition-colors">
                 <ArrowRight className="h-5 w-5" />
               </div>
             </a>
