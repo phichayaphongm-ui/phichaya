@@ -1,4 +1,5 @@
 export const runtime = 'edge';
+import { NextResponse } from "next/server";
 
 // Basic HTML escaping helper to prevent injection
 function escapeHtml(text: string): string {
@@ -48,8 +49,7 @@ export async function POST(req: Request) {
     const sanitizedService = escapeHtml(service);
     const sanitizedMessage = escapeHtml(message).replace(/\n/g, '<br/>');
 
-    // Send email using native fetch
-    const response = await fetch('https://api.resend.com/emails', {
+    const resResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -94,23 +94,16 @@ export async function POST(req: Request) {
       })
     });
 
-    const responseData = await response.json();
+    const responseData = await resResponse.json();
 
-    if (!response.ok) {
-      return new Response(
-        JSON.stringify({ error: responseData.message || "Email sending failed" }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
-      );
+    if (!resResponse.ok) {
+      console.error("Resend API full error object:", JSON.stringify(responseData, null, 2));
+      return NextResponse.json({ error: responseData.message || "Email sending failed" }, { status: 500 });
     }
 
-    return new Response(
-      JSON.stringify({ success: true, data: responseData }),
-      { status: 200, headers: { 'Content-Type': 'application/json' } }
-    );
-  } catch (error: any) {
-    return new Response(
-      JSON.stringify({ error: "Internal Server Error", details: error.message }),
-      { status: 500, headers: { 'Content-Type': 'application/json' } }
-    );
+    return NextResponse.json({ success: true, data: responseData });
+  } catch (error) {
+    console.error("Internal Error:", error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
