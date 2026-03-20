@@ -1,6 +1,8 @@
 export const runtime = 'edge';
 import { NextResponse } from "next/server";
 
+export const runtime = 'edge';
+
 // Basic HTML escaping helper to prevent injection
 function escapeHtml(text: string): string {
   return text
