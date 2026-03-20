@@ -32,3 +32,13 @@ Thumbs.db
 # Local env
 .env
 .vercel
+
+# Large Assets (Cloudflare Pages 25MB limit)
+public/videos/digital-hr-transformation.mp4
+public/videos/hr-consulting.mp4
+public/videos/hr-systems-apps.mp4
+public/videos/organization-development.mp4
+public/videos/recruitment-services.mp4
+public/videos/resume-cv-writing.mp4
+public/videos/training-solutions.mp4
+public/videos/website-development.mp4
