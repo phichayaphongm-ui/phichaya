@@ -1,5 +1,7 @@
 export const runtime = 'edge';
 
+export const runtime = 'edge';
+
 // Basic HTML escaping helper to prevent injection
 function escapeHtml(text: string): string {
   return text
