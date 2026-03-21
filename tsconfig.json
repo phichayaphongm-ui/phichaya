@@ -33,8 +33,9 @@
     "**/*.tsx",
     ".next/dev/types/**/*.ts",
     ".next/types/**/*.ts",
+    ".vercel/output/static/types/**/*.ts",
     "next-env.d.ts",
-    ".vercel/output/static/types/**/*.ts"
+    "out/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
