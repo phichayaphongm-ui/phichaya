@@ -14,9 +14,8 @@ function escapeHtml(text: string): string {
 // Basic email validation regex
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
 export async function POST(req: Request) {
-  console.log("Contact API: Received request");
+  console.log("Contact API: Received POST request");
   try {
     const apiKey = process.env.RESEND_API_KEY;
     
@@ -58,7 +57,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // Sanitize inputs for the HTML template
+    // Sanitize inputs for HTML template
     const sanitizedName = escapeHtml(name);
     const sanitizedService = escapeHtml(service);
     const sanitizedMessage = escapeHtml(message).replace(/\n/g, '<br/>');
@@ -131,4 +130,16 @@ export async function POST(req: Request) {
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
+}
+
+export async function GET(req: Request) {
+  console.log("Contact API: Received GET request");
+  return new Response(
+    JSON.stringify({ 
+      message: "Contact API endpoint is working. Please use POST method to send messages.",
+      method: "POST",
+      endpoint: "/api/contact"
+    }),
+    { status: 200, headers: { 'Content-Type': 'application/json' } }
+  );
 }
