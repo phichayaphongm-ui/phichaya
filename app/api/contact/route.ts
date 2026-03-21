@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+// Removed NextResponse to avoid async_hooks dependency
 export const runtime = 'edge';
 
 // Basic HTML escaping helper to prevent injection
