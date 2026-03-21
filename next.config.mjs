@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'out',
+  // Remove static export to enable API routes
+  // output: 'export',
+  // distDir: 'out',
   typescript: {
     // Temporarily ignore build errors for deployment
     ignoreBuildErrors: true,
