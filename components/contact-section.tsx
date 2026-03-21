@@ -69,12 +69,18 @@ export function ContactSection() {
         body: JSON.stringify(data),
       });
 
+      const contentType = response.headers.get("content-type");
       if (response.ok) {
         setSubmitted(true);
       } else {
-        const errorData = await response.json();
-        // Show specific error if available, otherwise generic
-        const errorMessage = errorData.error || "Failed to send message";
+        let errorMessage = "Failed to send message";
+        if (contentType && contentType.includes("application/json")) {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorData.details || errorMessage;
+        } else {
+          // If not JSON, it might be an HTML error page from Cloudflare/Server
+          errorMessage = `Server Error (${response.status}). Please check server logs.`;
+        }
         alert(`Error: ${errorMessage}`);
       }
     } catch (error: any) {

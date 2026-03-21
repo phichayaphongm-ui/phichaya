@@ -1,6 +1,4 @@
-export const runtime = 'edge';
 import { NextResponse } from "next/server";
-
 export const runtime = 'edge';
 
 // Basic HTML escaping helper to prevent injection
@@ -16,19 +14,33 @@ function escapeHtml(text: string): string {
 // Basic email validation regex
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
 export async function POST(req: Request) {
+  console.log("Contact API: Received request");
   try {
     const apiKey = process.env.RESEND_API_KEY;
     
     if (!apiKey) {
+      console.error("Contact API Error: Missing RESEND_API_KEY");
       return new Response(
         JSON.stringify({ error: "Server configuration error: Missing API Key" }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
-    const body = await req.json();
+    let body;
+    try {
+      body = await req.json();
+    } catch (e) {
+      console.error("Contact API Error: Invalid JSON in request body");
+      return new Response(
+        JSON.stringify({ error: "Invalid request body" }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     const { name, email, service, message } = body;
+    console.log(`Contact API: Processing message from ${email}`);
 
     // Check for missing fields
     if (!name || !email || !service || !message) {
@@ -51,6 +63,7 @@ export async function POST(req: Request) {
     const sanitizedService = escapeHtml(service);
     const sanitizedMessage = escapeHtml(message).replace(/\n/g, '<br/>');
 
+    console.log("Contact API: Sending email via Resend...");
     const resResponse = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
@@ -96,16 +109,26 @@ export async function POST(req: Request) {
       })
     });
 
-    const responseData = await resResponse.json();
+    const responseData: any = await resResponse.json();
 
     if (!resResponse.ok) {
-      console.error("Resend API full error object:", JSON.stringify(responseData, null, 2));
-      return NextResponse.json({ error: responseData.message || "Email sending failed" }, { status: 500 });
+      console.error("Contact API Error: Resend failed", responseData);
+      return new Response(
+        JSON.stringify({ error: responseData.message || "Email sending failed" }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
     }
 
-    return NextResponse.json({ success: true, data: responseData });
-  } catch (error) {
-    console.error("Internal Error:", error);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    console.log("Contact API: Success");
+    return new Response(
+      JSON.stringify({ success: true, data: responseData }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
+    );
+  } catch (error: any) {
+    console.error("Contact API Critical Error:", error);
+    return new Response(
+      JSON.stringify({ error: "Internal Server Error", details: error.message }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 }
