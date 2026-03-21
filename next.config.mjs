@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove static export to enable API routes
-  // output: 'export',
-  // distDir: 'out',
+  output: 'export',
+  distDir: 'out',
   typescript: {
     // Temporarily ignore build errors for deployment
     ignoreBuildErrors: true,
@@ -15,6 +14,10 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: false,
+  // Disable API routes for static export
+  experimental: {
+    missingSuspense: true,
+  },
   async headers() {
     return [
       {
