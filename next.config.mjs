@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  distDir: '.vercel/output/static',
   typescript: {
     // Temporarily ignore build errors for deployment
     ignoreBuildErrors: true,
