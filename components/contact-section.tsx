@@ -1,5 +1,5 @@
 "use client";
-// Force redeploy to refresh Vercel build hook
+// Triggering redeploy to apply new Cloudflare environment variables
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -77,9 +77,9 @@ export function ContactSection() {
         const errorMessage = errorData.error || "Failed to send message";
         alert(`Error: ${errorMessage}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Submission error:", error);
-      alert("Something went wrong. Please try again later.");
+      alert(`Something went wrong: ${error.message || "Please try again later"}`);
     } finally {
       setIsSubmitting(false);
     }
