@@ -14,9 +14,6 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: false,
-  experimental: {
-    optimizeCss: true,
-  },
   async headers() {
     return [
       {
