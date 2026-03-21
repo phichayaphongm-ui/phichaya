@@ -3,6 +3,8 @@ import { blogPosts } from "@/lib/blog-data";
 import { BlogPostContent } from "./content";
 import { Metadata } from "next";
 
+export const runtime = 'edge';
+
 type Props = {
     params: Promise<{ slug: string }>
 };

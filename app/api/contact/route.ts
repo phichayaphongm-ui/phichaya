@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+export const runtime = 'edge';
+
 // Basic HTML escaping helper to prevent injection
 function escapeHtml(text: string): string {
   return text
@@ -60,7 +62,7 @@ export async function POST(req: Request) {
       from: "Phichaya HR Solutions <onboarding@resend.dev>",
       to: ["phichayaphong.m@gmail.com"],
       subject: `New Contact Inquiry from ${sanitizedName}`,
-      replyTo: email,
+      reply_to: email,
       html: `
         <div style="font-family: sans-serif; line-height: 1.5; color: #333; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px; border-radius: 10px;">
           <h2 style="color: #1e3a5f; border-bottom: 2px solid #1e3a5f; padding-bottom: 10px;">New Website Inquiry</h2>
