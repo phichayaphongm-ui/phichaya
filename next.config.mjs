@@ -14,10 +14,6 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: false,
-  // Disable API routes for static export
-  experimental: {
-    missingSuspense: true,
-  },
   async headers() {
     return [
       {
