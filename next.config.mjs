@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: '.vercel/output/static',
+  // Remove output export for now to fix deployment
+  // output: 'export',
+  // distDir: '.vercel/output/static',
   typescript: {
     // Temporarily ignore build errors for deployment
     ignoreBuildErrors: true,
