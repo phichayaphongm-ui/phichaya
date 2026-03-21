@@ -3,5 +3,5 @@
   "name": "phichaya",
   "compatibility_date": "2025-11-17",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "out"
+  "pages_build_output_dir": ".next"
 }

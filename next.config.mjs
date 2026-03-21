@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'out',
+  // Remove static export to fix CSS and assets loading
+  // output: 'export',
+  // distDir: 'out',
   typescript: {
     // Temporarily ignore build errors for deployment
     ignoreBuildErrors: true,
