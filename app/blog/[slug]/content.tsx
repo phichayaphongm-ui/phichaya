@@ -71,14 +71,47 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 
                 <div className="prose prose-lg max-w-none prose-primary prose-headings:text-gray-900 prose-p:text-gray-600">
                     {post.content[language].split('\n').map((line, i) => {
-                        if (line.startsWith('##')) {
-                            return <h2 key={i} className="text-2xl font-bold mt-12 mb-6">{line.replace('##', '').trim()}</h2>;
+                        const trimmed = line.trim();
+                        if (trimmed === '') return null;
+
+                        const renderInlineTags = (text: string) => {
+                            const parts = text.split(/(\*\*.*?\*\*)/g);
+                            return parts.map((part, index) => {
+                                if (part.startsWith('**') && part.endsWith('**')) {
+                                    return <strong key={index} className="font-bold">{part.slice(2, -2)}</strong>;
+                                }
+                                return part;
+                            });
+                        };
+
+                        if (trimmed.startsWith('#### ')) {
+                            return <h4 key={i} className="text-lg font-bold mt-6 mb-3">{renderInlineTags(trimmed.replace('#### ', ''))}</h4>;
                         }
-                        if (line.startsWith('###')) {
-                            return <h3 key={i} className="text-xl font-bold mt-8 mb-4">{line.replace('###', '').trim()}</h3>;
+                        if (trimmed.startsWith('### ')) {
+                            return <h3 key={i} className="text-xl font-bold mt-8 mb-4">{renderInlineTags(trimmed.replace('### ', ''))}</h3>;
                         }
-                        if (line.trim() === '') return null;
-                        return <p key={i} className="mb-6">{line.trim()}</p>;
+                        if (trimmed.startsWith('## ')) {
+                            return <h2 key={i} className="text-2xl font-bold mt-12 mb-6">{renderInlineTags(trimmed.replace('## ', ''))}</h2>;
+                        }
+                        if (trimmed.startsWith('# ')) {
+                            return <h2 key={i} className="text-3xl font-bold mt-12 mb-6">{renderInlineTags(trimmed.replace('# ', ''))}</h2>;
+                        }
+                        if (trimmed.startsWith('- ')) {
+                            return (
+                                <ul key={i} className="list-disc ml-6 mb-2">
+                                    <li className="pl-1">{renderInlineTags(trimmed.replace('- ', ''))}</li>
+                                </ul>
+                            );
+                        }
+                        if (trimmed.startsWith('* ')) {
+                            return (
+                                <ul key={i} className="list-disc ml-6 mb-2">
+                                    <li className="pl-1">{renderInlineTags(trimmed.replace('* ', ''))}</li>
+                                </ul>
+                            );
+                        }
+                        
+                        return <p key={i} className="mb-6">{renderInlineTags(trimmed)}</p>;
                     })}
                 </div>
             </div>
