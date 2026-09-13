@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";
 import { PromotionBanner } from "@/components/promotion-banner";
+import { MudmyPromotion } from "@/components/mudmy-promotion";
 import { ServicesSection } from "@/components/services-section";
 import { PortfolioSection } from "@/components/portfolio-section";
 import { WhyChooseUs } from "@/components/why-choose-us";
@@ -38,6 +39,7 @@ export default function Page() {
       <Navigation />
       <HeroSection />
       <PromotionBanner />
+      <MudmyPromotion />
       <ServicesSection />
       <PortfolioSection />
       <WhyChooseUs />

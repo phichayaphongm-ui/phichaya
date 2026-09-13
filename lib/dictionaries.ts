@@ -231,6 +231,18 @@ export const dictionaries = {
             btn: "ดาวน์โหลดฟรี (PDF)",
             note: "*ดาวน์โหลดทันที ไม่ต้องกรอกข้อมูล",
         },
+        mudmyPromotion: {
+            badge: "แอปใหม่",
+            title: "Mudmy - หมุดหมายของชุมชนไทย",
+            desc: "แอปหมุดหมายที่ทำให้คนใกล้กันรู้จักกันมากขึ้น ค้นหาสินค้า ร้านค้า งาน บริการ และความช่วยเหลือใกล้บ้าน ไม่มีค่าคอมมิชชั่น",
+            btn: "ดูหมุดหมายใกล้ตัว",
+            features: {
+                marketplace: "ชุมชนแห่งการขาย",
+                jobs: "ส่งเสริมการมีงานทำ",
+                help: "ช่วยเหลือเกื้อกูลกัน",
+                news: "ข่าวสารใกล้ตัว"
+            }
+        },
         cta: {
             consult: "Free Consultation",
             title: "พร้อมยกระดับ HR ขององค์กรคุณ?",
@@ -711,6 +723,18 @@ export const dictionaries = {
             desc: "Strategies, Trends, and Adaptation Guide for Future-Ready Leaders.",
             btn: "Download Free (PDF)",
             note: "*Instant download, no form required",
+        },
+        mudmyPromotion: {
+            badge: "New App",
+            title: "Mudmy - Community Pins for Thailand",
+            desc: "A pin app that brings neighbors closer together. Find products, shops, jobs, services, and help nearby. No commission fees.",
+            btn: "See Nearby Pins",
+            features: {
+                marketplace: "Community Marketplace",
+                jobs: "Job Opportunities",
+                help: "Help & Support",
+                news: "Local News"
+            }
         },
         cta: {
             consult: "Free Consultation",

@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
 import { Kanit, Inter } from "next/font/google";
-import { StructuredData } from "@/components/structured-data";
 
 import "./globals.css";
 
@@ -102,7 +101,6 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <head>
-        <StructuredData type="organization" page="home" />
       </head>
       <body className={`${kanit.variable} ${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <I18nProvider>

@@ -11,13 +11,8 @@ import { dictionaries } from "@/lib/dictionaries";
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const { language } = useLanguage();
   const t = dictionaries[language].contact;
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const contactInfo = [
     {
@@ -90,8 +85,6 @@ export function ContactSection() {
       setIsSubmitting(false);
     }
   };
-
-  if (!mounted) return null;
 
   return (
     <section id="contact" className="section-gray py-28 relative overflow-hidden">
